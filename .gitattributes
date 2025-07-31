@@ -1,0 +1,6 @@
+proprietary/odm/etc/camera/facerestore/fr_models/RM_GP_A.bix[[:space:]]proprietary/odm/etc/camera/hybridraw_models/unet.bix[[:space:]]proprietary/odm/lib64/libarcsoft_turbo_fusion_raw_super_night.so[[:space:]]proprietary/odm/lib64/libarcsoft_turbo_hdr_raw.so filter=lfs diff=lfs merge=lfs -text
+proprietary/odm/lib64/libarcsoft_turbo_fusion_raw_super_night.so[[:space:]]proprietary/odm/lib64/libarcsoft_turbo_hdr_raw.so filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+proprietary/odm/etc/camera/facerestore/fr_models/RM_GP_A.bix[[:space:]] filter=lfs diff=lfs merge=lfs -text
+proprietary/odm/etc/camera/facerestore/fr_models/RM_GP_A.bix filter=lfs diff=lfs merge=lfs -text
+proprietary/odm/etc/camera/hybridraw_models/unet.bix filter=lfs diff=lfs merge=lfs -text
