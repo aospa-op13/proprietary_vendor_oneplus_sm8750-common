@@ -64,4 +64,3 @@ recvfrom: 1
 write: 1
 unlinkat: 1
 gettid: 1
-madvise: 1

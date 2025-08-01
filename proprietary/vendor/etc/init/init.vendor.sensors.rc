@@ -34,6 +34,8 @@ on early-boot
     chown system system /mnt/vendor/persist/sensors
     chown system system /mnt/vendor/persist/sensors/sns.reg
     chown system system /mnt/vendor/persist/sensors/sensors_list.txt
+    chown system system /mnt/vendor/persist/sensors/odp
+    chown system system /mnt/vendor/persist/sensors/odp/sns_odp_version
     chown system system /mnt/vendor/persist/sensors/registry
     chown system system /mnt/vendor/persist/sensors/registry/registry
     chown system system /mnt/vendor/persist/sensors/registry/registry/sensors_registry
@@ -44,10 +46,6 @@ on early-boot
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
     start vendor.sensors
     chown system system /sys/kernel/boot_adsp/ssr
-    chmod 0664 /dev/ssc_interactive
-    chown system system /dev/ssc_interactive
-    chmod 0666 /dev/ssc_screenshot_info
-    chown system system /dev/ssc_screenshot_info
 
 on post-fs-data && property:ro.build.type=userdebug
     #sensors log dir

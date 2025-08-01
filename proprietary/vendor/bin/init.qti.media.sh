@@ -34,6 +34,8 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #===============================================================================
 
+build_codename=`getprop vendor.media.system.build_codename`
+
 if [ -f /sys/devices/soc0/soc_id ]; then
     soc_hwid=`cat /sys/devices/soc0/soc_id` 2> /dev/null
 else
@@ -56,7 +58,28 @@ case "$target" in
         ;;
     "sun")
         setprop vendor.mm.target.enable.qcom_parser 0
-        setprop vendor.media.target_variant "_sun"
+        case "$soc_hwid" in
+            655|681|694)
+                setprop vendor.media.target_variant "_tuna_v0"
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.target_variant "_tuna_v1"
+                fi
+                ;;
+            659|686)
+                setprop vendor.media.target_variant "_kera_v0"
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.target_variant "_kera_v1"
+                fi
+                ;;
+            *)
+            setprop vendor.media.target_variant "_sun"
+            if [ $build_codename -le "15" ]; then
+                setprop vendor.netflix.bsp_rev "Q8750-39568-1"
+            fi
+            ;;
+        esac
         ;;
     "taro")
         setprop vendor.mm.target.enable.qcom_parser 1040479

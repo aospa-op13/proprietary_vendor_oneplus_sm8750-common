@@ -135,12 +135,8 @@
         <!--
             Standby Resume capability is supported
         -->
-        <!--
-            He.Chao@MULTIMEDIA.MEDIASERVER.WFD.7798916, 2024/08/28, Disable StandbyResumeCapability feature to
-            avoid the "lock screen clock" image cannot be send to sink.
-        -->
         <StandbyResumeCapability>
-            <Valid>0</Valid>
+            <Valid>1</Valid>
         </StandbyResumeCapability>
 
         <!--

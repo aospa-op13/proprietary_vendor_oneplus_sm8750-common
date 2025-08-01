@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
-Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted (subject to the limitations in the
@@ -34,31 +34,20 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
 <clstc_libs>
-
     <library>
-        <name>libclstc_algorithm_adapter.so</name>
+        <name>libdolbyclstc.so</name>
         <priority>1</priority>
         <enable>1</enable>
     </library>
 
-    <!-- #ifdef OPLUS_FEATURE_DOLBY_VISION_DPU
-    //WangZhikun@MULTIMEDIA.MEDIASERVER.PLAYER, 2024/04/26
-    //Add for Dolby Vision(DPU) SDK Integration -->
     <library>
-      <name>libdolbyclstc.so</name>
-      <priority>2</priority>
-      <enable>1</enable>
-    </library>
-    <!-- #endif /*OPLUS_FEATURE_DOLBY_VISION_DPU*/ -->
-
-    <library>
-        <name>libclstc_gcp_adapter.so</name>
+        <name>libclstc_algorithm_adapter.so</name>
         <priority>2</priority>
         <enable>1</enable>
     </library>
 
     <library>
-        <name>libdisplaysharpness.so</name>
+        <name>libclstc_gcp_adapter.so</name>
         <priority>3</priority>
         <enable>1</enable>
     </library>

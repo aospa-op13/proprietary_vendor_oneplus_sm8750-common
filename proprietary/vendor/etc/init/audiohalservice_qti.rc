@@ -14,10 +14,6 @@ service vendor.audio-hal-aidl /vendor/bin/hw/audiohalservice.qti
 on property:vendor.audio.ssr.trigger=1
     write /sys/kernel/boot_adsp/ssr 1
 
-#liuhaituo@MULTIMEDIA.AUDIODRIVER.HAL, 2023/8/4, generate adsp ramdump for agm call adsp ssr
-on property:vendor.audio.ssr.trigger=2 && property:ro.vendor.audio.adsp_crash_via_diag=1
-    exec /odm/bin/adsp_ssr_test -i 1 --ssr
-
 on boot
     chown media audio /sys/kernel/snd_card/card_state
 

@@ -48,14 +48,6 @@ fallback_setting()
 	done
 }
 
-#config fg and top cpu shares
-echo 5120 > /dev/cpuctl/top-app/cpu.shares
-echo 4096 > /dev/cpuctl/foreground/cpu.shares
-
-#config sstop and ssfg cpu shares
-echo 5120 > /dev/cpuctl/sstop/cpu.shares
-echo 4096 > /dev/cpuctl/ssfg/cpu.shares
-
 variant=$(get_num_logical_cores_in_physical_cluster "$1")
 echo "CPU topology: ${variant}"
 case "$variant" in
@@ -73,8 +65,3 @@ case "$variant" in
 	fallback_setting
 	;;
 esac
-
-# Limit kswapd & kcompactd in cpu0-6
-echo `ps -elf | grep -v grep | grep kswapd0 | awk '{print $2}'` > /dev/cpuset/kswapd-like/tasks
-echo `ps -elf | grep -v grep | grep kcompactd0 | awk '{print $2}'` > /dev/cpuset/kswapd-like/tasks
-

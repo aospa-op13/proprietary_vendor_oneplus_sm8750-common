@@ -39,14 +39,13 @@ case "$platformid" in
 		#Pass as an argument the max number of clusters supported on the SOC
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-sun.sh 2
 		;;
+	"655"|"681"|"694")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-tuna.sh 4
+		;;
+	"686"|"659")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kera.sh 3
+		;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
 		;;
 esac
-
-version_mode=`getprop ro.oplus.image.my_engineering.type`
-
-
-if [ $version_mode != "release" ]; then
-	/vendor/bin/sh /vendor/bin/init.qti.kernel.debug-ftrace.sh
-fi
