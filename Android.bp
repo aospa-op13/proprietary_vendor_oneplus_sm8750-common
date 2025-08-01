@@ -39,6 +39,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "aidl_hdcp_interface-V1-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/aidl_hdcp_interface-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "btaudio_offload_if",
     owner: "oneplus",
     strip: {
@@ -50,6 +76,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/btaudio_offload_if.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbase",
                 "libcutils",
                 "libfmq",
@@ -57,7 +84,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libbinder_ndk",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "libbluetooth_audio_session_qti",
                 "libbluetooth_audio_session_qti_2_1",
@@ -102,10 +128,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -145,10 +167,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -188,10 +206,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -231,10 +245,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -274,10 +284,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -317,10 +323,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -360,10 +362,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -403,10 +401,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -446,10 +440,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -489,10 +479,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -532,10 +518,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -575,10 +557,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -618,10 +596,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -661,10 +635,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -704,10 +674,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -747,10 +713,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -790,10 +752,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -833,10 +791,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -876,10 +830,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -919,10 +869,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -962,10 +908,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1005,10 +947,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1048,10 +986,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1091,10 +1025,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1134,10 +1064,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1177,10 +1103,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1220,10 +1142,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1263,10 +1181,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1306,10 +1220,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1349,10 +1259,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1392,10 +1298,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1435,10 +1337,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1478,10 +1376,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1521,10 +1415,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1564,10 +1454,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1607,10 +1493,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1650,10 +1532,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1693,10 +1571,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1736,10 +1610,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1779,10 +1649,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -1822,10 +1688,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -2033,7 +1895,6 @@ cc_prebuilt_library_shared {
                 "libcamxcommonutils",
                 "libcamxsettingsmanager",
                 "libcom.qti.chinodeutils",
-                "libhwconfigurationutil",
                 "libchilog",
                 "libcutils",
                 "liblog",
@@ -2100,8 +1961,6 @@ cc_prebuilt_library_shared {
                 "libcom.qti.chinodeutils",
                 "libchilog",
                 "libcutils",
-                "libhwconfigurationutil",
-                "libextensionlayer",
                 "liblog",
                 "libc",
                 "libm",
@@ -2173,10 +2032,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "com.qti.qseeaon",
@@ -2251,10 +2106,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libc",
@@ -2296,15 +2147,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -2460,15 +2303,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -2512,15 +2347,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -2564,15 +2391,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libchinodeevautils",
                 "libcom.qti.chinodeutils",
@@ -2615,15 +2434,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libz",
@@ -2666,15 +2477,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libchinodeevautils",
                 "libcom.qti.chinodeutils",
@@ -2780,15 +2583,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamxfdengine",
                 "libcom.qti.chinodeutils",
                 "libchilog",
@@ -2863,15 +2658,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamxvppservicebase",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -2916,17 +2703,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
-                "libsensorslog",
-                "libextensionlayer",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -3004,15 +2781,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -3145,15 +2914,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libchinodeevautils",
                 "libchinodehmeutils",
@@ -3198,10 +2959,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libc",
@@ -3243,15 +3000,9 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
+                "libcamximageformatutils",
+                "libcamxswispiqmodule",
                 "libchilog",
                 "libchinodeevautils",
                 "libchinodehmeutils",
@@ -3416,15 +3167,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libchinodeevautils",
                 "libcom.qti.chinodeutils",
@@ -3456,7 +3199,6 @@ cc_prebuilt_library_shared {
                 "libcamera_metadata",
                 "libcamxcommonutils",
                 "libcamxsettingsmanager",
-                "libcutils",
                 "libchilog",
                 "libc++",
                 "libcom.qti.chinodeutils",
@@ -3500,15 +3242,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libchinodeevautils",
                 "libchinodehmeutils",
@@ -3552,15 +3286,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libz",
@@ -3592,8 +3318,6 @@ cc_prebuilt_library_shared {
                 "libcamxcommonutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
-                "libSonyIMX471RmscLibrary",
-                "libhwconfigurationutil",
                 "liblog",
                 "libc++",
                 "libc",
@@ -3635,15 +3359,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libc",
@@ -3685,15 +3401,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -3738,15 +3446,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libz",
@@ -5368,10 +5068,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -5411,10 +5107,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libc",
                 "libm",
                 "libdl",
@@ -5535,15 +5227,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamximageformatutils",
                 "libchilog",
                 "camera.qcom",
@@ -5614,10 +5298,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5659,10 +5339,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5704,10 +5380,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5749,10 +5421,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5794,15 +5462,9 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "com.qti.feature2.generic",
                 "libchilog",
-                "libhwconfigurationutil",
-                "libextensionlayer",
                 "libz",
                 "libc",
                 "libm",
@@ -5842,10 +5504,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5887,10 +5545,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -5932,14 +5586,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
-                "libextensionlayer",
                 "libz",
                 "libc",
                 "libm",
@@ -5979,14 +5627,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
-                "libextensionlayer",
                 "libz",
                 "libc",
                 "libm",
@@ -6026,11 +5668,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
-                "libhwconfigurationutil",
                 "com.qti.chi.override",
                 "com.qti.feature2.generic.sm8750",
                 "com.qti.feature2.serializer",
@@ -6092,10 +5729,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6137,13 +5770,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
                 "libz",
                 "libc",
                 "libm",
@@ -6183,13 +5811,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
                 "libz",
                 "libc",
                 "libm",
@@ -6229,10 +5852,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6274,10 +5893,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6319,10 +5934,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6364,10 +5975,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6409,10 +6016,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6454,10 +6057,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6499,10 +6098,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6544,10 +6139,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6589,10 +6180,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6634,10 +6221,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6679,10 +6262,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6724,11 +6303,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
-                "libhwconfigurationutil",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6770,11 +6344,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
-                "libhwconfigurationutil",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6816,13 +6385,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
                 "libz",
                 "libc",
                 "libm",
@@ -6862,13 +6426,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
                 "libz",
                 "libc",
                 "libm",
@@ -6908,10 +6467,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6953,10 +6508,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -6998,10 +6549,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -7043,10 +6590,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -7122,15 +6665,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libprotobuf-cpp-full",
                 "libqmi_common_so",
                 "libqmi_cci",
@@ -7232,10 +6767,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -7277,10 +6808,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -7322,10 +6849,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.camx.chiiqutils",
                 "com.qti.chi.override",
                 "libchilog",
@@ -7368,13 +6891,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libextensionlayer",
                 "libz",
                 "libc",
                 "libm",
@@ -7414,10 +6932,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
                 "libz",
@@ -7603,13 +7117,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "com.qti.chi.override",
                 "libchilog",
-                "libhwconfigurationutil",
                 "libz",
                 "libc",
                 "libm",
@@ -8008,12 +7517,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
                 "libfmq",
                 "liblog",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "libc++",
                 "libc",
@@ -8040,12 +7549,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so",
             ],
             shared_libs: [
+                "android.hardware.audio.core-V2-ndk",
+                "android.hardware.bluetooth.audio-V4-ndk",
+                "android.media.audio.common.types-V3-ndk",
                 "libbluetooth_audio_session_qti",
                 "libbluetooth_audio_session_aidl_qti",
                 "android.hardware.bluetooth.audio-impl-qti",
-                "android.hardware.bluetooth.audio-V4-ndk",
-                "android.hardware.audio.core-V2-ndk",
-                "android.media.audio.common.types-V3-ndk",
                 "libaudioserviceexampleimpl",
                 "libaudioutils",
                 "libaudioaidlcommon",
@@ -8129,10 +7638,14 @@ cc_prebuilt_library_shared {
                 "libssl",
                 "mbedtls_qti",
                 "libcrypto",
+                "libbinder_ndk",
+                "android.hardware.thermal@2.0",
+                "android.hardware.thermal-V1-ndk",
                 "libminksocket_vendor",
                 "libPeripheralStateUtils",
-                "libbinder_ndk",
-                "vendor.oplus.hardware.stability.oplus_project-V1-ndk",
+                "libxpan_wifi_hal",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -8283,9 +7796,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_qti_2_1",
                 "libbluetooth_audio_session_qti",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "android.hardware.bluetooth.audio-impl-qti",
                 "libaudioutils",
@@ -8435,15 +7948,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "camera.qcom",
                 "libprotobuf-cpp-full",
                 "libcamximageformatutils",
@@ -8454,7 +7959,6 @@ cc_prebuilt_library_shared {
                 "libhwlispcffdump",
                 "libisphwsetting",
                 "libsiminputgenutil",
-                "libbgstatsmerger",
                 "libcamxhwlfrontend",
                 "libeva",
                 "libsynx",
@@ -8498,15 +8002,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libcamxcsl",
                 "libcamxfdengine",
                 "libcamximageformatutils",
@@ -8520,12 +8016,8 @@ cc_prebuilt_library_shared {
                 "libqmi_encdec",
                 "libsns_direct_channel_stub",
                 "libsnsapi",
-                "vendor.oplus.hardware.camera_rfi-V1-service-impl",
                 "libeva",
                 "libsynx",
-                "libcam.oplus.3a.v3",
-                "libcam.oplus.3a.v2",
-                "libolc_vnd",
                 "libz",
                 "libdl",
                 "libc",
@@ -8566,10 +8058,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libchifeature2",
                 "libchilog",
                 "vendor.qti.hardware.camera.offlinecamera-service-impl",
@@ -8711,7 +8199,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -8919,6 +8406,38 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "android.hardware.bluetooth@1.0",
                 "android.hardware.bluetooth@1.0-impl-qti",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth.xpanprovider-impl-qti.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libhardware",
+                "libutils",
+                "libcutils",
+                "libbinder_ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -9481,14 +9000,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/lib-imsrtpredunoem.so",
             ],
             shared_libs: [
-                "vendor.oplus.hardware.subsys_imsrtp-V1-ndk",
-                "vendor.oplus.hardware.subsys-V3-ndk_vendor",
-                "liblog",
-                "libutils",
+                "libdiag",
                 "libcutils",
-                "libbinder_ndk",
-                "libhidlbase",
-                "libmindroid-framework",
+                "libutils",
+                "liblog",
+                "qcril_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -9895,6 +9411,36 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libdiag",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libDxHdcp_ext",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libDxHdcp_ext.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libbinder_ndk",
+                "libbinder",
+                "liblog",
+                "aidl_hdcp_interface-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -10396,8 +9942,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libqcrilNrLogger",
-                "libutils",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -10833,7 +10377,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -10871,7 +10414,6 @@ cc_prebuilt_library_shared {
                 "libats",
                 "libarmemlog",
                 "libcutils",
-                "libdiag",
                 "libtinyalsa",
                 "libaudio_log_utils",
                 "libexpat",
@@ -11167,8 +10709,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaodoptfeature_vendor",
-    stem: "libaodoptfeature",
+    name: "libaodoptfeature",
     owner: "oneplus",
     strip: {
         none: true,
@@ -11351,13 +10892,9 @@ cc_prebuilt_library_shared {
                 "libvui_intf",
                 "libarmemlog",
                 "libhidlbase",
-                "libdiag",
-                "vendor.oplus.hardware.charger-V5-ndk",
-                "libbinder_ndk",
                 "libPeripheralStateUtils",
                 "libtinyalsa",
                 "libtinycompress",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -11721,6 +11258,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbluetooth_audio_session_aidl_qti.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "android.hardware.bluetooth.audio@2.0",
                 "android.hardware.bluetooth.audio@2.1",
                 "libbase",
@@ -11728,7 +11266,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libfmq",
                 "liblog",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libhidlbase",
                 "libxml2",
                 "libflatbuffers-cpp",
@@ -11911,12 +11448,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcamxcommonutils.so",
             ],
             shared_libs: [
+                "libutilscallstack",
                 "libc++",
                 "libcutils",
                 "liblog",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
-                "libutilscallstack",
                 "libsync",
                 "libutils",
                 "libz",
@@ -11982,9 +11517,6 @@ cc_prebuilt_library_shared {
                 "libsync",
                 "libutils",
                 "libcamxcommonutils",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
-                "libhwconfigurationutil",
                 "libsynx",
                 "libc",
                 "libm",
@@ -12396,7 +11928,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcamxcommonutils",
-                "libhwconfigurationutil",
                 "libcutils",
                 "libc++",
                 "liblog",
@@ -12555,15 +12086,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
+                "libbinder_ndk",
                 "libcamximageformatutils",
                 "libchilog",
                 "libcom.qti.chinodeutils",
@@ -12779,7 +12303,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -12871,15 +12394,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libz",
@@ -12921,15 +12436,7 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libcdsprpc",
-                "libxml2",
-                "libhwconfigurationutil",
-                "liboutils",
-                "liboplusdfx",
                 "libchilog",
                 "libcom.qti.chinodeutils",
                 "libz",
@@ -13063,8 +12570,8 @@ cc_prebuilt_library_shared {
                 "libshsc",
                 "libdsutils",
                 "libandroid_net",
-                "android.hardware.wifi.supplicant-V1-ndk",
-                "android.hardware.wifi.hostapd-V1-ndk",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "android.hardware.wifi.hostapd-V2-ndk",
                 "vendor.qti.data.factoryservice-V1-ndk",
                 "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
                 "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
@@ -13200,10 +12707,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "android.hardware.graphics.common@1.1",
                 "libcamximageformatutils",
                 "libchilog",
@@ -13243,10 +12746,6 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libchilog",
                 "libc",
                 "libm",
@@ -13458,9 +12957,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libdisplaydebug",
-                "libutils",
-                "liblog",
-                "libxml2",
                 "libc++",
                 "libc",
                 "libm",
@@ -15212,6 +14708,7 @@ cc_prebuilt_library_shared {
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
                 "libcdsprpc",
+                "libz",
                 "libc",
                 "libm",
                 "libdl",
@@ -15683,6 +15180,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libbinder_ndk",
                 "libutils",
+                "libnativewindow",
                 "libc++",
                 "libc",
                 "libm",
@@ -17131,7 +16629,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -19041,7 +18538,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libar-pal",
                 "vendor.qti.hardware.pal-V1-ndk",
-                "vendor.qti.hardware.paleventnotifier-V1-ndk",
+                "vendor.qti.hardware.paleventnotifier-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -19670,7 +19167,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libbinder_ndk",
-                "vendor.qti.hardware.qasr-V1-ndk",
+                "vendor.qti.hardware.qasr-V2-ndk",
                 "libar-pal",
                 "libc++",
                 "libc",
@@ -20202,6 +19699,7 @@ cc_prebuilt_library_shared {
                 "libqcodec2_platform",
                 "libqcodec2_basecodec",
                 "qti.video.utils.videobufferlayout",
+                "android.hardware.graphics.common-V5-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -20472,6 +19970,7 @@ cc_prebuilt_library_shared {
                 "libnativewindow",
                 "libvideotxr",
                 "qti.video.utils.videobufferlayout",
+                "mapper.qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -20561,6 +20060,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqcrilDataModule.so",
             ],
             shared_libs: [
+                "vendor.qti.hardware.data.iwlandata-V2-ndk",
                 "libqdpr",
                 "libdsi_netctrl",
                 "liblog",
@@ -20585,7 +20085,6 @@ cc_prebuilt_library_shared {
                 "qtiwakelock",
                 "android.hardware.radio-V3-ndk",
                 "android.hardware.radio.data-V3-ndk",
-                "vendor.qti.hardware.data.iwlandata-V2-ndk",
                 "vendor.qti.hardware.data.connectionaidl-V1-ndk",
                 "libc++",
                 "libc",
@@ -20611,21 +20110,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqcrilNr.so",
             ],
             shared_libs: [
-                "vendor.oplus.hardware.appradioaidl-V1-ndk",
-                "vendor.oplus.hardware.ims-V1-ndk",
-                "vendor.oplus.hardware.radio-V2-ndk",
-                "libcommcenterutils",
-                "libcommcenterfw",
-                "libutils",
-                "libbinder_ndk",
-                "liblog",
-                "libdmtpclient",
-                "lib-virtual-modem-protos",
-                "vendor.oplus.hardware.communicationcenter-V2-ndk",
                 "qcrilInterfaces",
                 "libhidlbase",
                 "libqcrilNrFramework",
                 "libcutils",
+                "liblog",
+                "libutils",
                 "qcrild_libqcrilnrutils",
                 "libqmi_cci",
                 "libqmi_client_qmux",
@@ -20655,9 +20145,10 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "qcrilNrQmiModule",
                 "libQtiRilLoadable",
+                "libbinder_ndk",
                 "qtiPeripheralMgr",
                 "vendor.qti.hardware.radio.ims-V16-ndk",
-                "vendor.qti.hardware.radio.qtiradio-V13-ndk",
+                "vendor.qti.hardware.radio.qtiradio-V14-ndk",
                 "vendor.qti.hardware.radio.am-V1-ndk",
                 "vendor.qti.hardware.radio.qcrilhook-V1-ndk",
                 "qcrilNr_aidl_common",
@@ -20678,7 +20169,6 @@ cc_prebuilt_library_shared {
                 "libsystem_health_mon2",
                 "libxml2",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20709,7 +20199,6 @@ cc_prebuilt_library_shared {
                 "qcrilNrQmiModule",
                 "libqcrilNr",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20769,7 +20258,6 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "libQtiRilLoadable",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20833,7 +20321,6 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "qcrilIntermodulemsgs",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20933,7 +20420,6 @@ cc_prebuilt_library_shared {
                 "libQtiRilLoadable",
                 "libril-legacy",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -21013,7 +20499,6 @@ cc_prebuilt_library_shared {
                 "qcrilIntermodulemsgs",
                 "qcrilInterfaces",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -22402,6 +21887,39 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqti-s3tf",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqti-s3tf.so",
+            ],
+            shared_libs: [
+                "libqti-scenariod",
+                "libcutils",
+                "liblog",
+                "libq-perflog",
+                "libutils",
+                "libqti-perfd",
+                "libbinder_ndk",
+                "vendor.qti.hardware.perf2-V1-ndk_vendor",
+                "libperfconfig",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqti-scenariod",
     owner: "oneplus",
     strip: {
@@ -22767,7 +22285,6 @@ cc_prebuilt_library_shared {
                 "libqcrilNrQtiMutex",
                 "qtiril-utils",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -23169,19 +22686,13 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
+                "libutils",
                 "libdisplaydebug",
                 "libsdmutils",
                 "libdrm",
                 "libdrmutils",
                 "libsdedrm",
                 "libsdmdal",
-                "libxml2",
-                "vendor.oplus.hardware.displaypanelfeature-V1-ndk",
-                "libbinder",
-                "libbinder_ndk",
-                "android.frameworks.stats-V1-ndk",
-                "libolc_vnd",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -23259,8 +22770,6 @@ cc_prebuilt_library_shared {
                 "libhidltransport",
                 "libcutils",
                 "libminksocket_vendor",
-                "android.hardware.thermal@1.0",
-                "android.hardware.thermal@2.0",
                 "libqrtr",
                 "android.hardware.thermal-V1-ndk",
                 "libbinder",
@@ -23321,7 +22830,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -23386,8 +22894,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libsensorslog",
                 "libsnsapi",
-                "libsns_api",
-                "libnanopb",
                 "libc++",
                 "libc",
                 "libm",
@@ -25481,6 +24987,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libmmosal_vendor",
+                "libDxHdcp_ext",
+                "libmm-hdcpmgr",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -26077,6 +25585,36 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libdiag",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libxpan_wifi_hal",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxpan_wifi_hal.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libnl",
+                "libhardware",
+                "liblog",
+                "libutils",
                 "libcutils",
                 "libc++",
                 "libc",
@@ -26796,7 +26334,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libbase",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -26876,7 +26413,6 @@ cc_prebuilt_library_shared {
                 "libqcrilNrLogger",
                 "libperipheral_client",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -27507,10 +27043,6 @@ cc_prebuilt_library_shared {
                 "libsensorslog",
                 "libhardware",
                 "libhidlbase",
-                "libjsoncpp",
-                "libui",
-                "libcwb_client_vendor",
-                "vendor.oplus.hardware.cwb@1.0",
                 "android.hardware.sensors@2.0",
                 "android.hardware.sensors@2.1",
                 "android.hardware.sensors@2.0-ScopedWakelock",
@@ -27545,7 +27077,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27581,7 +27112,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27617,7 +27147,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27652,7 +27181,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27660,6 +27188,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libaudioutils",
                 "liblog",
+                "libtinyxml2",
                 "libc++",
                 "libc",
                 "libm",
@@ -27689,7 +27218,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -28094,31 +27622,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.appradioaidl-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.appradioaidl-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.oplus.hardware.camera_rfi-V1-ndk_vendor",
     stem: "vendor.oplus.hardware.camera_rfi-V1-ndk",
     owner: "oneplus",
@@ -28208,32 +27711,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.oplus.hardware.charger-V5-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.communicationcenter-V2-ndk_vendor",
-    stem: "vendor.oplus.hardware.communicationcenter-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -28365,31 +27842,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.oplus.hardware.ims-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.radio-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.radio-V2-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -28912,6 +28364,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.bluetooth_sar-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -29039,11 +28516,8 @@ cc_prebuilt_library_shared {
                 "libcamxods",
                 "libcamxsettingsmanager",
                 "libqti_vndfwk_detect",
-                "vendor.oplus.hardware.osense.client-V1-ndk",
-                "libosenseaidlhalclient",
-                "libbinder_ndk",
-                "libosensenativeproxy_client",
                 "libbase",
+                "libbinder_ndk",
                 "com.qti.qseeaon",
                 "vendor.qti.hardware.camera.aon-V2-ndk",
                 "libz",
@@ -29986,6 +29460,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qasr-V2-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qasr-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qconfig-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -30755,7 +30255,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio-V13-ndk",
+    name: "vendor.qti.hardware.radio.qtiradio-V14-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -30763,7 +30263,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio-V13-ndk.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio-V14-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -32714,168 +32214,6 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvideocodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvideocodec.so",
-            ],
-            shared_libs: [
-                "lib-imsvtutils",
-                "lib-imsvtextutils",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libdiag_system",
-                "libgui",
-                "libandroid",
-                "libnativewindow",
-                "libmediandk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvt",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libmediandk",
-                "libnativewindow",
-                "libion",
-                "libdmabufheap",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhidlbase",
-                "vendor.qti.imsrtpservice@3.0",
-                "vendor.qti.imsrtpservice@3.1",
-                "libbinder",
-                "libbinder_ndk",
-                "vendor.qti.ImsRtpService-V1-ndk",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtextutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libOpenCL_system",
     owner: "oneplus",
     strip: {
@@ -32937,214 +32275,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdpmctmgr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmfdmgr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmframework",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmtcm",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimsmedia_jni",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ImsRtpService-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.diaghal@1.0",
     owner: "oneplus",
     strip: {
@@ -33156,166 +32286,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmservice@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.1",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.imsrtpservice@3.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -34064,31 +33034,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     relative_install_path: "hw",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-virtual-modem-protos",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/lib-virtual-modem-protos.so",
-            ],
-            shared_libs: [
-                "libprotobuf-cpp-lite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
     prefer: true,
     device_specific: true,
 }
@@ -36571,61 +35516,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcommcenterfw",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libcommcenterfw.so",
-            ],
-            shared_libs: [
-                "libcommcenterutils",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcommcenterutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libcommcenterutils.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcreatebin",
     owner: "oneplus",
     strip: {
@@ -36805,96 +35695,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "vendor.oplus.hardware.displaycolorfeature-V1-ndk",
                 "libdisplayfossfeature_nature",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdmtp-protos-lite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdmtp-protos-lite.so",
-            ],
-            shared_libs: [
-                "libprotobuf-cpp-lite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdmtp",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdmtp.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.communicationcenter-V2-ndk",
-                "libcommcenterutils",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libcommcenterfw",
-                "libbinder_ndk",
-                "libprotobuf-cpp-lite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdmtpclient",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdmtpclient.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.communicationcenter-V2-ndk",
-                "libcommcenterutils",
-                "libcutils",
-                "liblog",
-                "libbinder_ndk",
-                "libutils",
-                "libprotobuf-cpp-lite",
-                "libdmtp-protos-lite",
-                "libcommcenterfw",
                 "libc++",
                 "libc",
                 "libm",
@@ -37373,35 +36173,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimsortcapis",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libimsortcapis.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libbase",
-                "libutils",
-                "libortc_so",
-                "libmindroid-framework",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmindroid-app",
     owner: "oneplus",
     strip: {
@@ -37765,30 +36536,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libortc_so",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libortc_so.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "libm",
-                "liblog",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libosenseaidlhalclient",
     owner: "oneplus",
     strip: {
@@ -38048,139 +36795,6 @@ cc_prebuilt_library_shared {
                 "libprotobuf-cpp-lite",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-radio-service",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libqti-radio-service.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.subsys-V3-ndk",
-                "vendor.oplus.hardware.subsys_radio-V4-ndk",
-                "libradio-service",
-                "libsubsys-service",
-                "libradioapis",
-                "libsubsys-utils",
-                "libmindroid-framework",
-                "libhidlbase",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libcrypto",
-                "libssl",
-                "libbinder_ndk",
-                "libdiag",
-                "libqdutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libradio-service",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libradio-service.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.subsys-V3-ndk",
-                "vendor.oplus.hardware.subsys_radio-V4-ndk",
-                "libhidlbase",
-                "libmindroid-framework",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libz",
-                "libbinder_ndk",
-                "libsubsys-utils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libradioapis",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libradioapis.so",
-            ],
-            shared_libs: [
-                "libqmiservices",
-                "libqmi_encdec",
-                "libqmi_common_so",
-                "libqmi_cci",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "librfapis",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/librfapis.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libcutils",
-                "libc",
-                "liblog",
-                "libz",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -38747,34 +37361,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.appradio@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.appradio@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.oplus.hardware.camera.aon-V1-ndk_platform",
     owner: "oneplus",
     strip: {
@@ -38952,56 +37538,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.communicationcenter-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.communicationcenter-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.communicationcenter-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -39534,39 +38070,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "uimgbaservice",
-    owner: "oneplus",
-    apk: "proprietary/product/app/uimgbaservice/uimgbaservice.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "uimremoteclient",
-    owner: "oneplus",
-    apk: "proprietary/product/app/uimremoteclient/uimremoteclient.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "uimremoteserver",
-    owner: "oneplus",
-    apk: "proprietary/product/app/uimremoteserver/uimremoteserver.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
     name: "EuiccGoogle",
     owner: "oneplus",
     apk: "proprietary/product/priv-app/EuiccGoogle/EuiccGoogle.apk",
@@ -39603,75 +38106,6 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "ImsDataChannelService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/ImsDataChannelService/ImsDataChannelService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "ImsRcsService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "QtiTelephonyService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "dpmserviceapp",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "ims",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "qcrilmsgtunnel",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
 dex_import {
     name: "com.android.hotwordenrollment.common.util",
     owner: "oneplus",
@@ -39679,267 +38113,6 @@ dex_import {
         "proprietary/product/framework/com.android.hotwordenrollment.common.util.jar",
     ],
     product_specific: true,
-}
-
-dex_import {
-    name: "uimgbalibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimgbalibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimgbamanagerlibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimgbamanagerlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimremoteclientlibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimremoteclientlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimremoteserverlibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimremoteserverlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimservicelibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimservicelibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "com.qti.dpmframework",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/com.qti.dpmframework.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "dpmapi",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/dpmapi.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "oplus-ims-ext",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/oplus-ims-ext.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "qcrilhook",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/qcrilhook.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "rsmcService",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/rsmcService.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connection-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connectionaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factoryaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.imscmaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.imscmaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssipaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuceaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.uceaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.uceaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.imsdatachannel",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.imsdatachannel.jar",
-    ],
-    system_ext_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -40519,15 +38692,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "device_manifest_communication_center_aidl.xml",
-    owner: "oneplus",
-    src: "proprietary/odm/etc/vintf/manifest/device_manifest_communication_center_aidl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "device_manifest_subsys.xml",
     owner: "oneplus",
     src: "proprietary/odm/etc/vintf/manifest/device_manifest_subsys.xml",
@@ -40741,6 +38905,7 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "liblog",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -41144,6 +39309,7 @@ cc_prebuilt_binary {
                 "libcrypto",
                 "libminksocket_vendor",
                 "libminkdescriptor",
+                "libqcbor",
                 "libc++",
                 "libc",
                 "libm",
@@ -41185,6 +39351,8 @@ cc_prebuilt_binary {
                 "libqmiservices",
                 "libsoc_helper",
                 "vendor.qti.hardware.fm@1.0",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
                 "vendor.qti.hardware.bttpi-impl",
                 "android.hardware.bluetooth.lmp_event-V1-ndk",
                 "android.hardware.bluetooth.lmp_event-impl-qti",
@@ -41505,7 +39673,6 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "libATFWD",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -41854,6 +40021,8 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.qti.hardware.perf2-hal-service",
             ],
             shared_libs: [
+                "vendor.qti.snapdragonServices-V1-ndk",
+                "vendor.qti.snapdragonServices.qape-V1-ndk",
                 "liblog",
                 "libq-perflog",
                 "libcutils",
@@ -41861,8 +40030,6 @@ cc_prebuilt_binary {
                 "libutils",
                 "libbinder_ndk",
                 "vendor.qti.hardware.perf2-V1-ndk_vendor",
-                "vendor.qti.snapdragonServices.qape-V1-ndk",
-                "vendor.qti.snapdragonServices-V1-ndk",
                 "libqti-scenariod",
                 "libperfconfig",
                 "libqti-perfd",
@@ -41870,6 +40037,7 @@ cc_prebuilt_binary {
                 "libavservices_minijail",
                 "libqti-perfd-client",
                 "android.hardware.thermal-V1-ndk",
+                "libqti-s3tf",
                 "libc++",
                 "libc",
                 "libm",
@@ -42242,78 +40410,6 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
-    name: "init.kernel.init_boot-memory",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.init_boot-memory.sh",
-    filename: "init.kernel.init_boot-memory.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-memory",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot-memory.sh",
-    filename: "init.kernel.post_boot-memory.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot-sun.sh",
-    filename: "init.kernel.post_boot-sun.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun_5_2",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot-sun_5_2.sh",
-    filename: "init.kernel.post_boot-sun_5_2.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun_6_0",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot-sun_6_0.sh",
-    filename: "init.kernel.post_boot-sun_6_0.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun_default_6_2",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot-sun_default_6_2.sh",
-    filename: "init.kernel.post_boot-sun_default_6_2.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot.sh",
-    filename: "init.kernel.post_boot.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qcom.class_core",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qcom.class_core.sh",
-    filename: "init.qcom.class_core.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qcom.post_boot",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qcom.post_boot.sh",
-    filename: "init.qcom.post_boot.sh",
-    soc_specific: true,
-}
-
-sh_binary {
     name: "init.qcom.sensors",
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qcom.sensors.sh",
@@ -42334,14 +40430,6 @@ sh_binary {
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qti.display_boot.sh",
     filename: "init.qti.display_boot.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qti.kernel.sh",
-    filename: "init.qti.kernel.sh",
     soc_specific: true,
 }
 
@@ -42989,8 +41077,8 @@ cc_prebuilt_binary {
                 "libssl",
                 "libbase",
                 "libcom.android.tethering.connectivity_native",
-                "android.hardware.wifi.supplicant-V1-ndk",
-                "android.hardware.wifi.hostapd-V1-ndk",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "android.hardware.wifi.hostapd-V2-ndk",
                 "libminkdescriptor",
                 "libminksocket_vendor",
                 "libqcbor",
@@ -43382,8 +41470,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "liblog",
                 "libmdmdetect",
-                "libcrypto",
-                "libssl",
                 "libc++",
                 "libc",
                 "libm",
@@ -43710,14 +41796,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "system_dlkm_modprobe",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/system_dlkm_modprobe.sh",
-    filename: "system_dlkm_modprobe.sh",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "tftp_server",
     owner: "oneplus",
@@ -43959,14 +42037,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "vendor_modprobe",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/vendor_modprobe.sh",
-    filename: "vendor_modprobe.sh",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "vmmgr",
     owner: "oneplus",
@@ -44200,105 +42270,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "dpmd",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/dpmd",
-            ],
-            shared_libs: [
-                "libdpmframework",
-                "libdiag_system",
-                "libhardware_legacy",
-                "libhidlbase",
-                "libcutils",
-                "libutils",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "tcmd",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/tcmd",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libbinder_ndk",
-                "libcutils",
-                "libutils",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "liblog",
-                "vendor.qti.hardware.dpmservice@1.0",
-                "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-                "libavservices_minijail",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "commcenterd",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/commcenterd",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.communicationcenter-V2-ndk",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libcommcenterutils",
-                "libcommcenterfw",
-                "libbinder_ndk",
-                "libdmtp",
-                "libprotobuf-cpp-lite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    device_specific: true,
 }
 
 cc_prebuilt_binary {
@@ -44826,20 +42797,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     device_specific: true,
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
 }
 
 install_symlink {
