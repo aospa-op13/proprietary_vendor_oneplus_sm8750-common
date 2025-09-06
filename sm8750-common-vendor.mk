@@ -649,6 +649,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/subsys_daemon.rc:$(TARGET_COPY_OUT_ODM)/etc/init/subsys_daemon.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-touch-V2-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V7-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V7-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc \
@@ -659,6 +660,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/sap.conf:$(TARGET_COPY_OUT_ODM)/etc/sap.conf \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/uah/uahconfig.pb:$(TARGET_COPY_OUT_ODM)/etc/uah/uahconfig.pb \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b00:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b00 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b01:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b01 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b02:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b02 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b03:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b03 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b04:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b04 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b05:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b05 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b06:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b06 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b07:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b07 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b08:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b08 \
+    vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.mdt:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.mdt \
     vendor/oneplus/sm8750-common/proprietary/odm/lib64/camera/awb_parameter_default.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/awb_parameter_default.bin \
     vendor/oneplus/sm8750-common/proprietary/odm/lib64/camera/com.qti.sensorsocmap.socid_map.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.sensorsocmap.socid_map.bin \
     vendor/oneplus/sm8750-common/proprietary/odm/lib64/camera/com.qti.tuned.default.sun.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.tuned.default.sun.bin \
@@ -2136,6 +2147,7 @@ PRODUCT_PACKAGES += \
     libmlawbpostproc_dsp_skel \
     nearby.napp_header \
     nearby \
+    vendor.oplus.hardware.biometrics.fingerprintpay-V1-ndk \
     libQnnHtp.aiboost \
     libQnnHtpV79Stub.aiboost \
     libQnnSystem.aiboost \
@@ -2271,6 +2283,7 @@ PRODUCT_PACKAGES += \
     libhwconfigurationutil \
     libhybridraw_datas \
     libhybridraw_tuningparams \
+    libifaa_factory \
     libimgClarityEvaluate \
     libmindroid-app \
     libmindroid-framework \
@@ -2294,8 +2307,10 @@ PRODUCT_PACKAGES += \
     libqcodec2_dolbydecoderfilter \
     libqcodec2_dolbyencoderfilter \
     libqsh.utils \
+    librpmbengclient \
     libsat \
     libsaveshaderbin \
+    libsecurity_event_dcs_vnd \
     libsegmentPrePostProc \
     libsharebuffer \
     libsharebuffer_impl \
@@ -2420,6 +2435,7 @@ PRODUCT_PACKAGES += \
     manifest_oplus_displaypanelfeature_aidl.xml \
     manifest_oplus_esim.xml \
     manifest_oplus_fingerprint_aidl_v3.xml \
+    manifest_oplus_ifaa.xml \
     manifest_oplus_sendextcamcmd.xml \
     manifest_oplus_stability_project_aidl.xml \
     manifest_touch_aidl.xml \
@@ -2523,6 +2539,7 @@ PRODUCT_PACKAGES += \
     subsys_daemon \
     vendor-oplus-hardware-touch-V2-service \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff \
+    vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service \
     vendor.oplus.hardware.cammidasservice-V1-service \
     vendor.oplus.hardware.charger-V7-service \
     vendor.oplus.hardware.displaypanelfeature-service \
