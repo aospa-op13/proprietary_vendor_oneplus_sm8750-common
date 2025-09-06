@@ -35064,6 +35064,17 @@ android_app_import {
     product_specific: true,
 }
 
+android_app_import {
+    name: "SoterService",
+    owner: "oneplus",
+    apk: "proprietary/system_ext/app/SoterService/SoterService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
+
 dex_import {
     name: "com.android.hotwordenrollment.common.util",
     owner: "oneplus",

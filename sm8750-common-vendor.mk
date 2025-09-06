@@ -2369,6 +2369,7 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
+    SoterService \
     com.android.hotwordenrollment.common.util \
     ImsRtpService-aidl.xml \
     android.hardware.drm-service.xml \
