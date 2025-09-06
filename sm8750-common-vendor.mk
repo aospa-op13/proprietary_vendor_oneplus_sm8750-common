@@ -2469,7 +2469,6 @@ PRODUCT_PACKAGES += \
     audioadsprpcd \
     cdsprpcd \
     cnd \
-    cnss-daemon \
     diag-router \
     dspservice \
     edgnss-daemon \
