@@ -655,7 +655,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/media_codecs_dolby_vision.xml:$(TARGET_COPY_OUT_ODM)/etc/media_codecs_dolby_vision.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/sap.conf:$(TARGET_COPY_OUT_ODM)/etc/sap.conf \
-    vendor/oneplus/sm8750-common/proprietary/odm/etc/sdm_display_resolution_extn.xml:$(TARGET_COPY_OUT_ODM)/etc/sdm_display_resolution_extn.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/uah/uahconfig.pb:$(TARGET_COPY_OUT_ODM)/etc/uah/uahconfig.pb \
     vendor/oneplus/sm8750-common/proprietary/odm/lib64/camera/awb_parameter_default.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/awb_parameter_default.bin \
     vendor/oneplus/sm8750-common/proprietary/odm/lib64/camera/com.qti.sensorsocmap.socid_map.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.sensorsocmap.socid_map.bin \
@@ -751,7 +750,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/chre/preloaded_nanoapps.json:$(TARGET_COPY_OUT_VENDOR)/etc/chre/preloaded_nanoapps.json \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/clstc_config_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/clstc_config_library.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -788,12 +786,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/data/tlpd_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/tlpd_oem_config.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/default-permissions/vendor.qti.data.txpwradmin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/vendor.qti.data.txpwradmin.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/DPU1010.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU1010.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/DPU10__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU10__.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/DPU11__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU11__.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/DPU12__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU12__.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/DPU9__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU9__.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/camera_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/camera_alignments.json \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/cpu_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/cpu_alignments.json \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/default_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/default_alignments.json \
@@ -842,7 +834,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/dcfd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dcfd.rc \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/feature_enabler_client.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/feature_enabler_client.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/hexlpservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hexlpservice.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/hlosminkdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hlosminkdaemon.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/ims-dataservice-daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims-dataservice-daemon.rc \
@@ -884,7 +875,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.allocator-service.rc \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.composer-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.composer-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.demura-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.demura-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
@@ -1451,7 +1441,6 @@ PRODUCT_PACKAGES += \
     libaudioeffecthal.qti \
     libqtigatekeeper \
     libsoundtriggerhal.qti \
-    mapper.qti \
     mbedtls_qti \
     vendor.qti.hardware.bluetooth.finder-impl-qti \
     vendor.qti.hardware.bluetooth.xpanprovider-impl-qti \
@@ -1531,7 +1520,6 @@ PRODUCT_PACKAGES += \
     libaudiochargerlistener \
     libaudioplatformconverter.qti \
     libaudioserviceexampleimpl \
-    libbacklight-calib \
     libbatching \
     libbatterylistener \
     libbgstatsmerger \
@@ -1575,9 +1563,6 @@ PRODUCT_PACKAGES += \
     libchilog \
     libchinodeevautils \
     libchinodehmeutils \
-    libclstc_algorithm_adapter \
-    libclstc_gcp_adapter \
-    libclstc_tm \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -1595,15 +1580,11 @@ PRODUCT_PACKAGES += \
     libdepthcomputation \
     libdiag \
     libdiagjni \
-    libdigital-dimming \
-    libdisp-aba \
     libdisplayconfig.qti \
     libdisplaydebug \
-    libdisplayqos \
-    libdisplayskuutils \
     libdmap_consent_sdk \
     libdpp_manager \
-    libdpps \
+    libdpps_vendor \
     libdrmfs \
     libdrmtime \
     libdrmutils \
@@ -1621,10 +1602,10 @@ PRODUCT_PACKAGES += \
     libface3d_dev \
     libfastcvdsp_stub \
     libfastcvopt \
-    libfeutils \
+    libfeutils_vendor \
     libfilefinder \
     libfmpal \
-    libgame_enhance \
+    libgame_enhance_vendor \
     libgdtap \
     libgeofencing \
     libgnss \
@@ -1639,9 +1620,8 @@ PRODUCT_PACKAGES += \
     libhdcp2p2prov \
     libhdcpsrm \
     libhdr10plus \
-    libhdr_backlight_adapter \
     libhdr_stub \
-    libhdr_tm \
+    libhdr_tm_vendor \
     libhdrdynamic \
     libhdrdynamicootf \
     libhdrvivid \
@@ -1654,7 +1634,6 @@ PRODUCT_PACKAGES += \
     libhwlispcffdump \
     libiccprofile \
     libidl \
-    libintervmipc \
     libipebpsstriping \
     libipebpsstriping170 \
     libipebpsstriping480 \
@@ -1703,15 +1682,15 @@ PRODUCT_PACKAGES += \
     libmdmdetect \
     libmdsprpc \
     libmediautils_vendorex \
-    libmemutils \
+    libmemutils_vendor \
     libmfGhostDetection \
     libmfec \
     libmidasserviceintf \
     libmidasserviceintf_aidl \
     libminkdescriptor \
-    libminksocket_vendor \
+    libminksocket_vendor_vendor \
     libmlremosaicengine \
-    libmm-hdcpmgr \
+    libmm-hdcpmgr_vendor \
     libmmcamera_bestats \
     libmmcamera_cac \
     libmmcamera_lscv35 \
@@ -1778,7 +1757,7 @@ PRODUCT_PACKAGES += \
     libqc2audio_swaudiocodec \
     libqc2audio_utils \
     libqc2vppfilter \
-    libqcbor \
+    libqcbor_vendor \
     libqcc_file_agent \
     libqcc_sdk \
     libqcci_legacy \
@@ -1812,9 +1791,9 @@ PRODUCT_PACKAGES += \
     libqcrildatactl \
     libqcrildataqos \
     libqdMetaData \
-    libqdcm-algo \
-    libqdcm-json-mode-parser \
-    libqdcm-mode-parser \
+    libqdcm-algo_vendor \
+    libqdcm-json-mode-parser_vendor \
+    libqdcm-mode-parser_vendor \
     libqdi \
     libqdp \
     libqdpr \
@@ -1841,8 +1820,6 @@ PRODUCT_PACKAGES += \
     libqms \
     libqms_client \
     libqrtr \
-    libqrtrclient \
-    libqseed3 \
     libqsegnet \
     libqservice \
     libqsh \
@@ -1854,7 +1831,6 @@ PRODUCT_PACKAGES += \
     libqtikeymaster4 \
     libqtikeymint \
     librcc \
-    librcmask \
     libril-db \
     libril-legacy \
     libril-qc-ltedirectdisc \
@@ -1866,14 +1842,9 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libsdedrm \
-    libsdm-color \
-    libsdm-colormgr-algo \
-    libsdm-disp-vndapis \
     libsdmclient \
     libsdmcore \
     libsdmdal \
-    libsdmextension \
     libsdmutils \
     libsdsprpc \
     libseclog \
@@ -1885,8 +1856,8 @@ PRODUCT_PACKAGES += \
     libsiminputgenutil \
     libslimclient \
     libsmemlog \
-    libsnapdragoncolor-manager \
-    libsnapdragoncolor-qdcm \
+    libsnapdragoncolor-manager_vendor \
+    libsnapdragoncolor-qdcm_vendor \
     libsndcardparser \
     libsns_api \
     libsns_device_mode_stub \
@@ -1915,12 +1886,10 @@ PRODUCT_PACKAGES += \
     libsystem_health_mon2 \
     libtaautoload \
     libtensorflowlite_c \
-    libtestutils \
     libtfestriping \
     libthermalclient \
     libthreadutils \
     libtime_genoff \
-    libtinyxml2_1 \
     libtlpd \
     libtlpd_configmgr \
     libtlpd_crypto \
@@ -1928,11 +1897,9 @@ PRODUCT_PACKAGES += \
     libtlpd_logger \
     libtrustedapploader \
     libubifocus \
-    libubwcp \
     libvideoml \
     libvideotxr \
     libvideoutils \
-    libvmfilexfer \
     libvmmem \
     libvppclient \
     libvppcommon \
@@ -2451,7 +2418,6 @@ PRODUCT_PACKAGES += \
     manifest_identity_credential.xml \
     manifest_non_qmaa.xml \
     manifest_non_qmaa_extn.xml \
-    mapper.qti.xml \
     mwqem-saidl.xml \
     qasr_vintf.xml \
     qesdk-manager.xml \
@@ -2509,7 +2475,6 @@ PRODUCT_PACKAGES += \
     edgnss-daemon \
     embmsslServer \
     engine-service \
-    feature_enabler_client \
     hdcp1prov \
     hdcp2p2prov \
     hexlpservice \
@@ -2528,7 +2493,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.hardware.capabilityconfigstore-service \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.qseecom@1.0-service \
@@ -2556,9 +2520,8 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
-    ppd \
     qcc-vendor \
-    qdcmss \
+    qdcmss_vendor \
     qesdk-manager \
     qlm-service \
     qmipriod \
@@ -2588,7 +2551,6 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine-v2 \
     time_daemon \
-    ubwcconvert \
     vendor.dpmd \
     vendor.qti.hardware.soter-provision \
     vendor.qti.syshealthmon-service \
