@@ -39,6 +39,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "aidl_hdcp_interface-V1-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/aidl_hdcp_interface-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "btaudio_offload_if",
     owner: "oneplus",
     strip: {
@@ -50,6 +76,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/btaudio_offload_if.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbase",
                 "libcutils",
                 "libfmq",
@@ -57,7 +84,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libbinder_ndk",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "libbluetooth_audio_session_qti",
                 "libbluetooth_audio_session_qti_2_1",
@@ -8008,12 +8034,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
                 "libfmq",
                 "liblog",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "libc++",
                 "libc",
@@ -8040,12 +8066,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so",
             ],
             shared_libs: [
+                "android.hardware.audio.core-V2-ndk",
+                "android.hardware.bluetooth.audio-V4-ndk",
+                "android.media.audio.common.types-V3-ndk",
                 "libbluetooth_audio_session_qti",
                 "libbluetooth_audio_session_aidl_qti",
                 "android.hardware.bluetooth.audio-impl-qti",
-                "android.hardware.bluetooth.audio-V4-ndk",
-                "android.hardware.audio.core-V2-ndk",
-                "android.media.audio.common.types-V3-ndk",
                 "libaudioserviceexampleimpl",
                 "libaudioutils",
                 "libaudioaidlcommon",
@@ -8129,10 +8155,14 @@ cc_prebuilt_library_shared {
                 "libssl",
                 "mbedtls_qti",
                 "libcrypto",
+                "libbinder_ndk",
+                "android.hardware.thermal@2.0",
+                "android.hardware.thermal-V1-ndk",
                 "libminksocket_vendor",
                 "libPeripheralStateUtils",
-                "libbinder_ndk",
-                "vendor.oplus.hardware.stability.oplus_project-V1-ndk",
+                "libxpan_wifi_hal",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -8283,9 +8313,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_qti_2_1",
                 "libbluetooth_audio_session_qti",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbluetooth_audio_session_aidl_qti",
                 "android.hardware.bluetooth.audio-impl-qti",
                 "libaudioutils",
@@ -8933,6 +8963,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth.xpanprovider-impl-qti.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libhardware",
+                "libutils",
+                "libcutils",
+                "libbinder_ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.bluetooth_audio@2.0-impl",
     owner: "oneplus",
     strip: {
@@ -9481,14 +9543,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/lib-imsrtpredunoem.so",
             ],
             shared_libs: [
-                "vendor.oplus.hardware.subsys_imsrtp-V1-ndk",
-                "vendor.oplus.hardware.subsys-V3-ndk_vendor",
-                "liblog",
-                "libutils",
+                "libdiag",
                 "libcutils",
-                "libbinder_ndk",
-                "libhidlbase",
-                "libmindroid-framework",
+                "libutils",
+                "liblog",
+                "qcril_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -9895,6 +9954,36 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libdiag",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libDxHdcp_ext",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libDxHdcp_ext.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libbinder_ndk",
+                "libbinder",
+                "liblog",
+                "aidl_hdcp_interface-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -10396,8 +10485,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libqcrilNrLogger",
-                "libutils",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -11720,6 +11807,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbluetooth_audio_session_aidl_qti.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "android.hardware.bluetooth.audio@2.0",
                 "android.hardware.bluetooth.audio@2.1",
                 "libbase",
@@ -11727,7 +11815,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libfmq",
                 "liblog",
-                "android.hardware.bluetooth.audio-V4-ndk",
                 "libhidlbase",
                 "libxml2",
                 "libflatbuffers-cpp",
@@ -12778,7 +12865,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -13062,8 +13148,8 @@ cc_prebuilt_library_shared {
                 "libshsc",
                 "libdsutils",
                 "libandroid_net",
-                "android.hardware.wifi.supplicant-V1-ndk",
-                "android.hardware.wifi.hostapd-V1-ndk",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "android.hardware.wifi.hostapd-V2-ndk",
                 "vendor.qti.data.factoryservice-V1-ndk",
                 "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
                 "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
@@ -13457,9 +13543,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libdisplaydebug",
-                "libutils",
-                "liblog",
-                "libxml2",
                 "libc++",
                 "libc",
                 "libm",
@@ -17130,7 +17213,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -20560,6 +20642,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqcrilDataModule.so",
             ],
             shared_libs: [
+                "vendor.qti.hardware.data.iwlandata-V2-ndk",
                 "libqdpr",
                 "libdsi_netctrl",
                 "liblog",
@@ -20584,7 +20667,6 @@ cc_prebuilt_library_shared {
                 "qtiwakelock",
                 "android.hardware.radio-V3-ndk",
                 "android.hardware.radio.data-V3-ndk",
-                "vendor.qti.hardware.data.iwlandata-V2-ndk",
                 "vendor.qti.hardware.data.connectionaidl-V1-ndk",
                 "libc++",
                 "libc",
@@ -20610,21 +20692,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqcrilNr.so",
             ],
             shared_libs: [
-                "vendor.oplus.hardware.appradioaidl-V1-ndk",
-                "vendor.oplus.hardware.ims-V1-ndk",
-                "vendor.oplus.hardware.radio-V2-ndk",
-                "libcommcenterutils",
-                "libcommcenterfw",
-                "libutils",
-                "libbinder_ndk",
-                "liblog",
-                "libdmtpclient",
-                "lib-virtual-modem-protos",
-                "vendor.oplus.hardware.communicationcenter-V2-ndk",
                 "qcrilInterfaces",
                 "libhidlbase",
                 "libqcrilNrFramework",
                 "libcutils",
+                "liblog",
+                "libutils",
                 "qcrild_libqcrilnrutils",
                 "libqmi_cci",
                 "libqmi_client_qmux",
@@ -20654,9 +20727,10 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "qcrilNrQmiModule",
                 "libQtiRilLoadable",
+                "libbinder_ndk",
                 "qtiPeripheralMgr",
                 "vendor.qti.hardware.radio.ims-V16-ndk",
-                "vendor.qti.hardware.radio.qtiradio-V13-ndk",
+                "vendor.qti.hardware.radio.qtiradio-V14-ndk",
                 "vendor.qti.hardware.radio.am-V1-ndk",
                 "vendor.qti.hardware.radio.qcrilhook-V1-ndk",
                 "qcrilNr_aidl_common",
@@ -20677,7 +20751,6 @@ cc_prebuilt_library_shared {
                 "libsystem_health_mon2",
                 "libxml2",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20708,7 +20781,6 @@ cc_prebuilt_library_shared {
                 "qcrilNrQmiModule",
                 "libqcrilNr",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20768,7 +20840,6 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "libQtiRilLoadable",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20832,7 +20903,6 @@ cc_prebuilt_library_shared {
                 "libril-legacy",
                 "qcrilIntermodulemsgs",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -20932,7 +21002,6 @@ cc_prebuilt_library_shared {
                 "libQtiRilLoadable",
                 "libril-legacy",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -21012,7 +21081,6 @@ cc_prebuilt_library_shared {
                 "qcrilIntermodulemsgs",
                 "qcrilInterfaces",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -22766,7 +22834,6 @@ cc_prebuilt_library_shared {
                 "libqcrilNrQtiMutex",
                 "qtiril-utils",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -23168,19 +23235,13 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
+                "libutils",
                 "libdisplaydebug",
                 "libsdmutils",
                 "libdrm",
                 "libdrmutils",
                 "libsdedrm",
                 "libsdmdal",
-                "libxml2",
-                "vendor.oplus.hardware.displaypanelfeature-V1-ndk",
-                "libbinder",
-                "libbinder_ndk",
-                "android.frameworks.stats-V1-ndk",
-                "libolc_vnd",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -23320,7 +23381,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
@@ -25480,6 +25540,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libmmosal_vendor",
+                "libDxHdcp_ext",
+                "libmm-hdcpmgr",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -26076,6 +26138,36 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libdiag",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libxpan_wifi_hal",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libxpan_wifi_hal.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libnl",
+                "libhardware",
+                "liblog",
+                "libutils",
                 "libcutils",
                 "libc++",
                 "libc",
@@ -26795,7 +26887,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libbase",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -26875,7 +26966,6 @@ cc_prebuilt_library_shared {
                 "libqcrilNrLogger",
                 "libperipheral_client",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -27544,7 +27634,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27580,7 +27669,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27616,7 +27704,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27651,7 +27738,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -27659,6 +27745,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libaudioutils",
                 "liblog",
+                "libtinyxml2",
                 "libc++",
                 "libc",
                 "libm",
@@ -27688,7 +27775,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.common-V2-ndk",
                 "android.media.audio.common.types-V3-ndk",
                 "android.hardware.common.fmq-V1-ndk",
-                "libaudioaidlcommon",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -28911,6 +28997,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.bluetooth_sar-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -29985,6 +30096,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qasr-V2-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qasr-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qconfig-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -30763,6 +30900,31 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio-V13-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.qtiradio-V14-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio-V14-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -41140,6 +41302,7 @@ cc_prebuilt_binary {
                 "libcrypto",
                 "libminksocket_vendor",
                 "libminkdescriptor",
+                "libqcbor",
                 "libc++",
                 "libc",
                 "libm",
@@ -41181,6 +41344,8 @@ cc_prebuilt_binary {
                 "libqmiservices",
                 "libsoc_helper",
                 "vendor.qti.hardware.fm@1.0",
+                "vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk",
+                "vendor.qti.hardware.bluetooth.xpanprovider-impl-qti",
                 "vendor.qti.hardware.bttpi-impl",
                 "android.hardware.bluetooth.lmp_event-V1-ndk",
                 "android.hardware.bluetooth.lmp_event-impl-qti",
@@ -41501,7 +41666,6 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "libATFWD",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -42905,8 +43069,8 @@ cc_prebuilt_binary {
                 "libssl",
                 "libbase",
                 "libcom.android.tethering.connectivity_native",
-                "android.hardware.wifi.supplicant-V1-ndk",
-                "android.hardware.wifi.hostapd-V1-ndk",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "android.hardware.wifi.hostapd-V2-ndk",
                 "libminkdescriptor",
                 "libminksocket_vendor",
                 "libqcbor",
@@ -43298,8 +43462,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "liblog",
                 "libmdmdetect",
-                "libcrypto",
-                "libssl",
                 "libc++",
                 "libc",
                 "libm",

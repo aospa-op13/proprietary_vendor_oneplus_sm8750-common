@@ -1250,6 +1250,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.diaghal-V1-ndk \
+    aidl_hdcp_interface-V1-ndk \
     btaudio_offload_if \
     com.qti.eeprom.gt24p128c2csli_imx766 \
     com.qti.eeprom.gt24p128e2csli_s5kjn1 \
@@ -1478,6 +1479,7 @@ PRODUCT_PACKAGES += \
     mbedtls_qti \
     vendor.qti.hardware.alarm-impl \
     vendor.qti.hardware.bluetooth.finder-impl-qti \
+    vendor.qti.hardware.bluetooth.xpanprovider-impl-qti \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     vendor.qti.hardware.bluetooth_sar@aidl-impl \
@@ -1507,6 +1509,7 @@ PRODUCT_PACKAGES += \
     libCneAppJni \
     libDcfHalFramework \
     libDcfHalLogger \
+    libDxHdcp_ext \
     libEvrcSwCodec \
     libFace3DTA \
     libFace3D_hlos \
@@ -2040,6 +2043,7 @@ PRODUCT_PACKAGES += \
     libwms \
     libwqe \
     libxml \
+    libxpan_wifi_hal \
     libxtadapter \
     qcrilInterfaces \
     qcrilIntermodulemsgs \
@@ -2142,6 +2146,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.ListenSoundModelAidl-V1-ndk \
     vendor.qti.hardware.agm-V1-ndk \
     vendor.qti.hardware.alarm-V1-ndk \
+    vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk \
     vendor.qti.hardware.bluetooth_sar-V1-ndk \
     vendor.qti.hardware.bttpi-V3-ndk \
     vendor.qti.hardware.c2pa-V1-ndk \
@@ -2182,6 +2187,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf2-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule-V1-ndk \
     vendor.qti.hardware.qasr-V1-ndk \
+    vendor.qti.hardware.qasr-V2-ndk \
     vendor.qti.hardware.qconfig-V1-ndk \
     vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom-V1-ndk \
@@ -2210,6 +2216,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.qcrilhook-V1-ndk \
     vendor.qti.hardware.radio.qcrilhook@1.0 \
     vendor.qti.hardware.radio.qtiradio-V13-ndk \
+    vendor.qti.hardware.radio.qtiradio-V14-ndk \
     vendor.qti.hardware.radio.qtiradio@1.0 \
     vendor.qti.hardware.radio.qtiradio@2.0 \
     vendor.qti.hardware.radio.qtiradio@2.1 \
