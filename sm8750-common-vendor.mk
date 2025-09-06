@@ -1435,13 +1435,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2_vendor \
     com.qualcomm.qti.uceservice@2.3_vendor \
     deviceInfoServiceModuleNr \
-    eglSubDriverAndroid \
-    libEGL_adreno \
-    libGLESv1_CM_adreno \
-    libGLESv2_adreno \
-    libVkLayer_ADRENO_qprofiler \
-    libq3dtools_adreno \
-    libq3dtools_esx \
     android.hardware.bluetooth.audio-impl-qti \
     android.hardware.bluetooth.audio_sw \
     android.hardware.bluetooth.lmp_event-impl-qti \
@@ -1475,7 +1468,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.soter-impl \
-    vulkan.adreno \
     lib-imscommon \
     lib-imsdcservice \
     lib-imsdpl \
@@ -1491,7 +1483,6 @@ PRODUCT_PACKAGES += \
     libATFWD \
     libAlacSwDec \
     libApeSwDec \
-    libCB \
     libCneAppJni \
     libDcfHalFramework \
     libDcfHalLogger \
@@ -1506,8 +1497,6 @@ PRODUCT_PACKAGES += \
     libGPTEE_vendor \
     libGPreqcancel \
     libGPreqcancel_svc \
-    libOpenCL \
-    libOpenCL_adreno \
     libPanelChaplin \
     libPeripheralStateUtils \
     libQ6MSFR_manager_stub \
@@ -1525,9 +1514,6 @@ PRODUCT_PACKAGES += \
     lib_bt_bundle \
     libaacvibrator \
     libadm \
-    libadreno_app_profiles \
-    libadreno_compiler_cl \
-    libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
     libagm \
@@ -1651,11 +1637,9 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     libgpt \
     libgpu_tonemapper \
-    libgpudataproducer \
     libgralloc.qti \
     libgralloccore \
     libgrallocutils \
-    libgsl \
     libhdcp1prov \
     libhdcp2p2prov \
     libhdcpsrm \
@@ -1685,17 +1669,12 @@ PRODUCT_PACKAGES += \
     libjni_imageutil \
     libjnihelper \
     libjpege \
-    libkcl \
-    libkernelmanager \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
     liblistensoundmodel2vendor \
     liblistensoundmodelaidl \
-    libllvm-glnext \
-    libllvm-qcom \
-    libllvm-qgl \
     liblmthermallistner_vendor \
     libloadalgo_stub \
     libloc_api_v02 \
@@ -2231,7 +2210,6 @@ PRODUCT_PACKAGES += \
     libmlawbpostproc_dsp_skel \
     nearby.napp_header \
     nearby \
-    libOpenCL_system \
     libQnnHtp.aiboost \
     libQnnHtpV79Stub.aiboost \
     libQnnSystem.aiboost \
@@ -2641,8 +2619,3 @@ PRODUCT_PACKAGES += \
     oplus_sensor_fb \
     touchDaemon \
     touchHidlTest
-
-PRODUCT_PACKAGES += \
-    vendor_lib64_libEGL_adreno_so \
-    vendor_lib64_libGLESv2_adreno_so \
-    vendor_lib64_libq3dtools_adreno_so
