@@ -859,7 +859,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider-service_64.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.allocator-service.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
@@ -1477,7 +1476,6 @@ PRODUCT_PACKAGES += \
     libsoundtriggerhal.qti \
     mapper.qti \
     mbedtls_qti \
-    vendor.qti.hardware.alarm-impl \
     vendor.qti.hardware.bluetooth.finder-impl-qti \
     vendor.qti.hardware.bluetooth.xpanprovider-impl-qti \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
@@ -2145,7 +2143,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-service \
     vendor.qti.hardware.ListenSoundModelAidl-V1-ndk \
     vendor.qti.hardware.agm-V1-ndk \
-    vendor.qti.hardware.alarm-V1-ndk \
     vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk \
     vendor.qti.hardware.bluetooth_sar-V1-ndk \
     vendor.qti.hardware.bttpi-V3-ndk \
@@ -2626,7 +2623,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.camera.provider.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
-    vendor.qti.hardware.alarm.xml \
     vendor.qti.hardware.capabilityconfigstore-service.xml \
     vendor.qti.hardware.display.allocator-service.xml \
     vendor.qti.hardware.display.composer-service3_v3.xml \
@@ -2696,7 +2692,6 @@ PRODUCT_PACKAGES += \
     qcrilNrd \
     vendor.qti.MemHal-service \
     vendor.qti.camera.provider-service_64 \
-    vendor.qti.hardware.alarm-service \
     vendor.qti.hardware.capabilityconfigstore-service \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.color-service \
@@ -2730,7 +2725,6 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
-    power_off_alarm \
     poweropt-service \
     ppd \
     qcc-vendor \
