@@ -7,6 +7,17 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/Custom_LUT_hlg.cube:$(TARGET_COPY_OUT_ODM)/etc/Custom_LUT_hlg.cube \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Center_P3.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Center_P3.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Center_sRGB.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Center_sRGB.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Enhance_P3.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Enhance_P3.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Enhance_sRGB.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Enhance_sRGB.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Stand_P3.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Stand_P3.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_Stand_sRGB.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_Stand_sRGB.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_StandardMode_P3.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_StandardMode_P3.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/3D-Lut_StandardMode_sRGB.txt:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/3D-Lut_StandardMode_sRGB.txt \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/AdjustValue:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/AdjustValue \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/Lut3D_311:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/Lut3D_311 \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/PanelChaplin/Lut3D_312:$(TARGET_COPY_OUT_ODM)/etc/PanelChaplin/Lut3D_312 \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/aac_richtap.config:$(TARGET_COPY_OUT_ODM)/etc/aac_richtap.config \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/apdr.conf:$(TARGET_COPY_OUT_ODM)/etc/apdr.conf \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/camera/AIAEVideoModel.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/AIAEVideoModel.bin \
@@ -636,7 +647,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/camera/wide_padding_mapxy_33x25.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/wide_padding_mapxy_33x25.bin \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/charge.cfg:$(TARGET_COPY_OUT_ODM)/etc/charge.cfg \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/display/cwb_weightspos.json:$(TARGET_COPY_OUT_ODM)/etc/display/cwb_weightspos.json \
-    vendor/oneplus/sm8750-common/proprietary/odm/etc/displaycolorfeaturecfg.xml:$(TARGET_COPY_OUT_ODM)/etc/displaycolorfeaturecfg.xml \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/displayadfr2minfpscfg.xml:$(TARGET_COPY_OUT_ODM)/etc/displayadfr2minfpscfg.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/dolby/display/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby/display/dolby_vision.cfg \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/dolby/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby/dolby_vision.cfg \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/hdr3dlut_pq_qcom_grid_out_rgb.cube:$(TARGET_COPY_OUT_ODM)/etc/hdr3dlut_pq_qcom_grid_out_rgb.cube \
@@ -651,7 +662,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc \
-    vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V7-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V7-service.rc \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V8-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V8-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/izat.conf:$(TARGET_COPY_OUT_ODM)/etc/izat.conf \
@@ -688,6 +699,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
     vendor/oneplus/sm8750-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/2024-09-06_platform_RSA_SM8750_license_1c6f20f8-67d1-46ef-818d-469363847d91.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-09-06_platform_RSA_SM8750_license_1c6f20f8-67d1-46ef-818d-469363847d91.pfm \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/HapticsPolicy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/HapticsPolicy.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb \
@@ -798,6 +810,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/data/tlpd_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/tlpd_oem_config.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/default-permissions/vendor.qti.data.txpwradmin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/vendor.qti.data.txpwradmin.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/backlight_calib_Sharp_qhd_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/backlight_calib_Sharp_qhd_cmd_mode_dsi_panel.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/backlight_calib_Sharp_qhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/backlight_calib_Sharp_qhd_video_mode_dsi_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/camera_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/camera_alignments.json \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/cpu_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/cpu_alignments.json \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/display/default_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/default_alignments.json \
@@ -907,12 +921,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AA569_P_3_A0019_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AA569_P_3_A0019_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AA590_P_3_A0020_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AA590_P_3_A0020_dsc_cmd_mode_panel.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AA594_P_7_A0020_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AA594_P_7_A0020_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AB849_P_1_A0022_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AB849_P_1_A0022_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AC140_P_1_A0002_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AC140_P_1_A0002_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AC140_S_3_A0014_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AC140_S_3_A0014_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AC140_S_3_A0014_dsc_cmd_mode_panel_secondary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AC140_S_3_A0014_dsc_cmd_mode_panel_secondary.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AC218_P_3_A0019_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AC218_P_3_A0019_dsc_cmd_mode_panel.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_AC274_P_3_A0026_dsc_video_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_AC274_P_3_A0026_dsc_video_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_P_3_AB849_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_P_3_AB849_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_P_3_AE035_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_P_3_AE035_dsc_cmd_mode_panel.xml \
+    vendor/oneplus/sm8750-common/proprietary/vendor/etc/ltm_config_XN242_p_d_dsc_video_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_XN242_p_d_dsc_video_mode_panel.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/media_codecs_performance_sun.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_sun.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/media_codecs_sun.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_sun.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
@@ -1073,7 +1091,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/vmmgr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/vmmgr.conf \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
-    vendor/oneplus/sm8750-common/proprietary/vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/wifi/vendor_cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_cmd.xml \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
@@ -2180,6 +2197,7 @@ PRODUCT_PACKAGES += \
     libBokehPre \
     libCS \
     libCaptureBokeh \
+    libColorMark \
     libEIS \
     libEISLive \
     libFDClite \
@@ -2260,13 +2278,14 @@ PRODUCT_PACKAGES += \
     libc++_shared \
     libcam.oplus.3a.v2 \
     libcam.oplus.3a.v3 \
+    libclstc_color_feature \
     libcreatebin \
     libcreatebinForBaseretouch \
     libcreatebinForFaceretouch \
     libcvface_api \
+    libdisplayadfr2minfps_qcom \
     libdisplayaidlapis \
     libdisplayfossfeature_nature \
-    libdisplaysharpness \
     libdolbyclstc \
     libdolbydecoderprocessor \
     libdolbyeglcore \
@@ -2331,7 +2350,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.camera_rfi-V1-ndk \
     vendor.oplus.hardware.camera_rfi-V1-service-impl \
     vendor.oplus.hardware.cammidasservice-V1-ndk \
-    vendor.oplus.hardware.charger-V7-ndk \
+    vendor.oplus.hardware.charger-V8-ndk \
     vendor.oplus.hardware.charger@1.0 \
     vendor.oplus.hardware.cwb-V1-ndk \
     vendor.oplus.hardware.displaycolorfeature-V1-ndk \
@@ -2531,12 +2550,14 @@ PRODUCT_PACKAGES += \
     xtra-daemon \
     xtwifi-client \
     cwb_utils_aidl \
+    gauged \
     subsys_daemon \
+    ufcsd \
     vendor-oplus-hardware-touch-V2-service \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff \
     vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service \
     vendor.oplus.hardware.cammidasservice-V1-service \
-    vendor.oplus.hardware.charger-V7-service \
+    vendor.oplus.hardware.charger-V8-service \
     vendor.oplus.hardware.displaypanelfeature-service \
     vendor.oplus.hardware.esim@1.0-service \
     vendor.oplus.hardware.stability.oplus_project-V1-service \

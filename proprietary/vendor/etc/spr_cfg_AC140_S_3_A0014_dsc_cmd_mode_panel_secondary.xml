@@ -3,7 +3,7 @@
   <SprConfig NumModes="4" DefaultMode="0">
     <Mode ModeID="0" Name="Mode0">
       <AdaptiveMode>YYGM</AdaptiveMode>
-      <FilterType>2DAvgB</FilterType>
+      <FilterType>2DAvgPhase1</FilterType>
       <FilterCoeffs>0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0</FilterCoeffs>
       <PhaseInc>8</PhaseInc>
       <PhaseRepeat>2</PhaseRepeat>
@@ -18,7 +18,7 @@
     </Mode>
     <Mode ModeID="1" Name="Mode1">
       <AdaptiveMode>YYGM</AdaptiveMode>
-      <FilterType>2DAvgB</FilterType>
+      <FilterType>2DAvgPhase1</FilterType>
       <FilterCoeffs>0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0</FilterCoeffs>
       <PhaseInc>8</PhaseInc>
       <PhaseRepeat>2</PhaseRepeat>
@@ -33,7 +33,7 @@
     </Mode>
     <Mode ModeID="2" Name="Mode2">
       <AdaptiveMode>YYGM</AdaptiveMode>
-      <FilterType>2DAvgB</FilterType>
+      <FilterType>2DAvgPhase1</FilterType>
       <FilterCoeffs>0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0</FilterCoeffs>
       <PhaseInc>8</PhaseInc>
       <PhaseRepeat>2</PhaseRepeat>
@@ -48,7 +48,7 @@
     </Mode>
     <Mode ModeID="3" Name="Mode3">
       <AdaptiveMode>YYGM</AdaptiveMode>
-      <FilterType>2DAvgB</FilterType>
+      <FilterType>2DAvgPhase1</FilterType>
       <FilterCoeffs>0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0, 0, 256, 256, 0</FilterCoeffs>
       <PhaseInc>8</PhaseInc>
       <PhaseRepeat>2</PhaseRepeat>

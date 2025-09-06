@@ -30427,6 +30427,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libColorMark",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libColorMark.so",
+            ],
+            shared_libs: [
+                "libc++_shared",
+                "liblog",
+                "libdl",
+                "libz",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libEIS",
     owner: "oneplus",
     strip: {
@@ -32508,6 +32534,41 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libclstc_color_feature",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libclstc_color_feature.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libbinder",
+                "libsdmutils",
+                "libqservice",
+                "libtinyxml2",
+                "libbinder_ndk",
+                "vendor.oplus.hardware.displaycolorfeature-V1-ndk",
+                "libdisplayfossfeature_nature",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcreatebin",
     owner: "oneplus",
     strip: {
@@ -32604,6 +32665,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdisplayadfr2minfps_qcom",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libdisplayadfr2minfps_qcom.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libbinder",
+                "libbinder_ndk",
+                "libtinyxml2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdisplayaidlapis",
     owner: "oneplus",
     strip: {
@@ -32652,41 +32743,6 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libbinder_ndk",
                 "libtinyxml2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdisplaysharpness",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdisplaysharpness.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdisplaydebug",
-                "libbinder",
-                "libsdmutils",
-                "libqservice",
-                "libtinyxml2",
-                "libbinder_ndk",
-                "vendor.oplus.hardware.displaycolorfeature-V1-ndk",
-                "libdisplayfossfeature_nature",
                 "libc++",
                 "libc",
                 "libm",
@@ -34484,7 +34540,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.charger-V7-ndk",
+    name: "vendor.oplus.hardware.charger-V8-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -34492,7 +34548,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.charger-V7-ndk.so",
+                "proprietary/odm/lib64/vendor.oplus.hardware.charger-V8-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -38568,6 +38624,35 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "gauged",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/hw/gauged",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "subsys_daemon",
     owner: "oneplus",
     target: {
@@ -38581,6 +38666,35 @@ cc_prebuilt_binary {
                 "libutils",
                 "libmindroid-framework",
                 "libmindroid-app",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ufcsd",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/hw/ufcsd",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -38725,12 +38839,12 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.oplus.hardware.charger-V7-service",
+    name: "vendor.oplus.hardware.charger-V8-service",
     owner: "oneplus",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/odm/bin/hw/vendor.oplus.hardware.charger-V7-service",
+                "proprietary/odm/bin/hw/vendor.oplus.hardware.charger-V8-service",
             ],
             shared_libs: [
                 "libcutils",
@@ -38744,7 +38858,7 @@ cc_prebuilt_binary {
                 "android.hardware.sensors@1.0",
                 "libsensorndkbridge",
                 "libm",
-                "vendor.oplus.hardware.charger-V7-ndk",
+                "vendor.oplus.hardware.charger-V8-ndk",
                 "vendor.oplus.hardware.osense.client-V1-ndk",
                 "libosenseaidlhalclient",
                 "libjsoncpp",
