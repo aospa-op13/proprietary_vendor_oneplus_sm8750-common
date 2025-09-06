@@ -654,12 +654,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V7-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V7-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc \
-    vendor/oneplus/sm8750-common/proprietary/odm/etc/init/vendor.oplus.hardware.urcc-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.urcc-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/izat.conf:$(TARGET_COPY_OUT_ODM)/etc/izat.conf \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/media_codecs_dolby_vision.xml:$(TARGET_COPY_OUT_ODM)/etc/media_codecs_dolby_vision.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/sap.conf:$(TARGET_COPY_OUT_ODM)/etc/sap.conf \
-    vendor/oneplus/sm8750-common/proprietary/odm/etc/uah/uahconfig.pb:$(TARGET_COPY_OUT_ODM)/etc/uah/uahconfig.pb \
     vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b00:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b00 \
     vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b01:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b01 \
     vendor/oneplus/sm8750-common/proprietary/odm/firmware/secure_ta/alipay.b02:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/alipay.b02 \
@@ -2293,7 +2291,6 @@ PRODUCT_PACKAGES += \
     libocce3a \
     libocompression \
     libolc_vnd \
-    liboplus-uah-client \
     liboplus_service \
     liboplusdfx \
     libopluspdparam \
@@ -2321,8 +2318,6 @@ PRODUCT_PACKAGES += \
     libtcs3449 \
     libtensorflowlite_oplus \
     libtrace \
-    libuahcore \
-    liburcccore \
     libvega_common \
     libvega_face \
     libwatermark_photo \
@@ -2345,7 +2340,6 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.stability.oplus_project-V2-ndk \
     vendor.oplus.hardware.subsys-V3-ndk \
     vendor.oplus.hardware.subsys_radio-V4-ndk \
-    vendor.oplus.hardware.urcc-V1-ndk \
     libQnnHtpV79Skel.unsigned.aiboost \
     libaiboostubwc_skel.aiboost \
     capi_v3_oprec \
@@ -2441,7 +2435,6 @@ PRODUCT_PACKAGES += \
     manifest_touch_aidl.xml \
     secure_element-service.xml \
     vendor.oplus.camera.aon-impl.xml \
-    vendor.oplus.hardware.urcc-service.xml \
     adpl \
     adsprpcd \
     audioadsprpcd \
@@ -2545,7 +2538,6 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.displaypanelfeature-service \
     vendor.oplus.hardware.esim@1.0-service \
     vendor.oplus.hardware.stability.oplus_project-V1-service \
-    vendor.oplus.hardware.urcc-service \
     wlschgd \
     init.subsys \
     oplus_sensor_fb \

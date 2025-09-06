@@ -33373,35 +33373,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liboplus-uah-client",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/liboplus-uah-client.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liboplus_service",
     owner: "oneplus",
     strip: {
@@ -34169,73 +34140,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libuahcore",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libuahcore.so",
-            ],
-            shared_libs: [
-                "libthermalclient",
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libprotobuf-cpp-lite",
-                "libxml2",
-                "libcrypto",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liburcccore",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/liburcccore.so",
-            ],
-            shared_libs: [
-                "android.frameworks.stats-V1-ndk",
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libxml2",
-                "libbinder_ndk",
-                "libutils",
-                "libcrypto",
-                "libprotobuf-cpp-lite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvega_common",
     owner: "oneplus",
     strip: {
@@ -34795,31 +34699,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "vendor.oplus.hardware.subsys-V3-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.urcc-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.urcc-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -35709,15 +35588,6 @@ prebuilt_etc_xml {
     name: "vendor.oplus.camera.aon-impl.xml",
     owner: "oneplus",
     src: "proprietary/odm/etc/vintf/manifest/vendor.oplus.camera.aon-impl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.oplus.hardware.urcc-service.xml",
-    owner: "oneplus",
-    src: "proprietary/odm/etc/vintf/manifest/vendor.oplus.hardware.urcc-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     device_specific: true,
@@ -38926,37 +38796,6 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "libutils",
                 "libhardware",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    device_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.oplus.hardware.urcc-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/hw/vendor.oplus.hardware.urcc-service",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libbinder_ndk",
-                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
