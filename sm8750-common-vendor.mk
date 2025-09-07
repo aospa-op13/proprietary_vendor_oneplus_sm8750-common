@@ -1729,6 +1729,7 @@ PRODUCT_PACKAGES += \
     libnspsession \
     libnspsuperresolutionserviceextension \
     libnsptransaction \
+    liboemcrypto \
     libofestriping \
     libois_channel_stub \
     liboischannel \
