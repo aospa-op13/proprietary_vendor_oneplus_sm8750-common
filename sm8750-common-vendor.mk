@@ -651,6 +651,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/dolby/display/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby/display/dolby_vision.cfg \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/dolby/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby/dolby_vision.cfg \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/hdr3dlut_pq_qcom_grid_out_rgb.cube:$(TARGET_COPY_OUT_ODM)/etc/hdr3dlut_pq_qcom_grid_out_rgb.cube \
+    vendor/oneplus/sm8750-common/proprietary/odm/etc/horae/horae_target.conf:$(TARGET_COPY_OUT_ODM)/etc/horae/horae_target.conf \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/android.hardware.contexthub-service.qmi.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.contexthub-service.qmi.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/esim@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/esim@1.0-service.rc \
     vendor/oneplus/sm8750-common/proprietary/odm/etc/init/hw/init.oplus.display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/hw/init.oplus.display.rc \
@@ -698,6 +699,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/product/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml \
     vendor/oneplus/sm8750-common/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
     vendor/oneplus/sm8750-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    vendor/oneplus/sm8750-common/proprietary/system_ext/etc/horae/horae.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/horae/horae.conf \
+    vendor/oneplus/sm8750-common/proprietary/system_ext/etc/init/horae.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/horae.rc \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/2024-09-06_platform_RSA_SM8750_license_1c6f20f8-67d1-46ef-818d-469363847d91.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-09-06_platform_RSA_SM8750_license_1c6f20f8-67d1-46ef-818d-469363847d91.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm \
     vendor/oneplus/sm8750-common/proprietary/vendor/etc/HapticsPolicy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/HapticsPolicy.xml \
@@ -1247,6 +1250,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8750-common/proprietary/vendor/lib64/qsn3all.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/qsn3all.bin
 
 PRODUCT_PACKAGES += \
+    libostatslog \
+    vendor.oplus.hardware.displaypanelfeature-V1-ndk \
+    vendor.oplus.hardware.performance-V1-ndk \
     aidl_hdcp_interface-V1-ndk \
     android.hardware.common-V2-ndk_platform \
     btaudio_offload_if \
@@ -2164,6 +2170,8 @@ PRODUCT_PACKAGES += \
     nearby.napp_header \
     nearby \
     vendor.oplus.hardware.biometrics.fingerprintpay-V1-ndk \
+    vendor.oplus.hardware.charger-V1-ndk \
+    vendor.oplus.hardware.displaypanelfeature@1.0 \
     libQnnHtp.aiboost \
     libQnnHtpV79Stub.aiboost \
     libQnnSystem.aiboost \
@@ -2354,7 +2362,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.charger@1.0 \
     vendor.oplus.hardware.cwb-V1-ndk \
     vendor.oplus.hardware.displaycolorfeature-V1-ndk \
-    vendor.oplus.hardware.displaypanelfeature-V1-ndk \
+    vendor.oplus.hardware.displaypanelfeature-V1-ndk_odm \
     vendor.oplus.hardware.olc2-V2-ndk \
     vendor.oplus.hardware.sendextcamcmd-V1-service-impl \
     vendor.oplus.hardware.sendextcamcmd-V2-ndk \
@@ -2549,6 +2557,7 @@ PRODUCT_PACKAGES += \
     wifidisplayhalservice \
     xtra-daemon \
     xtwifi-client \
+    horae \
     cwb_utils_aidl \
     gauged \
     subsys_daemon \
