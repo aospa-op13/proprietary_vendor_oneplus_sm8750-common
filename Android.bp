@@ -5,38 +5,11 @@
 soong_namespace {
     imports: [
         "device/oneplus/sm8750-common",
-        "hardware/qcom-caf/sm8750",
-        "hardware/qcom-caf/wlan",
         "hardware/oplus",
-        "vendor/qcom/opensource/commonsys/display",
-        "vendor/qcom/opensource/commonsys-intf/display",
-        "vendor/qcom/opensource/dataservices",
+        "vendor/qcom/common/vendor/adreno/v",
+        "vendor/qcom/common/vendor/media/6.6",
+        "vendor/qcom/common/vendor/perf",
     ],
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system/lib64/vendor.qti.diaghal-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
 }
 
 cc_prebuilt_library_shared {
@@ -103,225 +76,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "eglSubDriverAndroid",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/eglSubDriverAndroid.so",
-            ],
-            shared_libs: [
-                "libEGL_adreno",
-                "libcutils",
-                "libhardware",
-                "libgsl",
-                "libnativewindow",
-                "vendor.qti.hardware.display.mapper@2.0",
-                "vendor.qti.hardware.display.mapper@3.0",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@2.0",
-                "libbinder_ndk",
-                "libvndksupport",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libmapperutils",
-                "libgralloctypes",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "android.hardware.graphics.mapper@4.0",
-                "libgralloc.qti",
-                "vendor.qti.hardware.display.mapperextensions@1.1",
-                "libhidlbase",
-                "libutils",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libEGL_adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libEGL_adreno.so",
-            ],
-            shared_libs: [
-                "libadreno_utils",
-                "libgsl",
-                "libcutils",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libGLESv1_CM_adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so",
-            ],
-            shared_libs: [
-                "libgsl",
-                "libcutils",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libGLESv2_adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libGLESv2_adreno.so",
-            ],
-            shared_libs: [
-                "libadreno_utils",
-                "libgsl",
-                "libllvm-glnext",
-                "libcutils",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libVkLayer_ADRENO_qprofiler",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libz",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libq3dtools_adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libq3dtools_adreno.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libgsl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libq3dtools_esx",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libq3dtools_esx.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libz",
-                "libdl",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
 }
@@ -764,39 +518,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.alarm-impl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm-impl.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.alarm-V1-ndk",
-                "libbinder",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.bluetooth.finder-impl-qti",
     owner: "oneplus",
     strip: {
@@ -1034,146 +755,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vulkan.adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vulkan.adreno.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libz",
-                "libadreno_utils",
-                "libgsl",
-                "liblog",
-                "libllvm-glnext",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.display.mapper@2.0",
-                "android.hardware.graphics.mapper@2.0",
-                "vendor.qti.hardware.display.mapper@3.0",
-                "android.hardware.graphics.mapper@3.0",
-                "vendor.qti.hardware.display.mapperextensions@1.1",
-                "libhidlbase",
-                "libutils",
-                "libnativewindow",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "android.hardware.graphics.mapper@4.0",
-                "libbinder_ndk",
-                "libvndksupport",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libmapperutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libAlacSwDec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libAlacSwDec.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libApeSwDec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libApeSwDec.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libCB",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libCB.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libgsl",
-                "libutils",
-                "libadreno_utils",
-                "libnativewindow",
-                "libvndksupport",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libbinder_ndk",
-                "libmapperutils",
-                "libgralloc.qti",
-                "libgralloctypes",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "android.hardware.graphics.mapper@4.0",
-                "vendor.qti.hardware.display.mapperextensions@1.0",
-                "vendor.qti.hardware.display.mapperextensions@1.1",
-                "libhidlbase",
-                "vendor.qti.hardware.display.mapper@3.0",
-                "android.hardware.graphics.mapper@3.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libDcfHalFramework",
     owner: "oneplus",
     strip: {
@@ -1227,32 +808,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libEvrcSwCodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libEvrcSwCodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libFileMux_proprietary",
     owner: "oneplus",
     strip: {
@@ -1268,31 +823,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libFlacSwDec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libFlacSwDec.so",
-            ],
-            shared_libs: [
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1349,59 +879,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libutils",
                 "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libOpenCL",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libOpenCL.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libOpenCL_adreno",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libOpenCL_adreno.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libvndksupport",
                 "liblog",
                 "libc++",
                 "libc",
@@ -1502,32 +979,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libQcelp13SwCodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libQcelp13SwCodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libSensorsInterface",
     owner: "oneplus",
     strip: {
@@ -1615,91 +1066,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadreno_app_profiles",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadreno_app_profiles.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "vendor.qti.qspmhal-V1-ndk",
-                "libqspm-mem-utils-vendor",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadreno_compiler_cl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadreno_compiler_cl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadreno_utils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadreno_utils.so",
-            ],
-            shared_libs: [
-                "libgsl",
-                "liblog",
-                "libnativewindow",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libadsp_default_listener",
     owner: "oneplus",
     strip: {
@@ -1748,112 +1114,6 @@ cc_prebuilt_library_shared {
                 "libdmabufheap",
                 "libvmmem",
                 "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaodoptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libaodoptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libapengine",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libapengine.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libmeters-ns",
-                "liblmutils-ns",
-                "libsqlite",
-                "libhwbinder",
-                "libhidlbase",
-                "libutils",
-                "libtinyxml2-v34",
-                "libthermalclient",
-                "liblmthermallistner",
-                "libqti-qesdk-secure",
-                "libbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V12-ndk",
-                "android.hardware.thermal-V1-ndk",
-                "android.hidl.allocator@1.0",
-                "vendor.qti.qspmhal-V1-ndk",
-                "libqspm-mem-utils-vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libappclassifier",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libappclassifier.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libsqlite",
-                "libc++",
-                "libc",
                 "libm",
                 "libdl",
             ],
@@ -2228,40 +1488,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbtnv.so",
             ],
             shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcamerapoweroptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcamerapoweroptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -3163,42 +2389,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgamepoweroptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgamepoweroptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libsqlite",
-                "libbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libgpt",
     owner: "oneplus",
     strip: {
@@ -3213,61 +2403,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libQSEEComAPI",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgpudataproducer",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgpudataproducer.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgsl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgsl.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libz",
-                "libsync",
-                "libdmabufheap",
                 "libc++",
                 "libc",
                 "libm",
@@ -3519,54 +2654,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkcl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkcl.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libkernelmanager",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkernelmanager.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libkeymasterdeviceutils",
     owner: "oneplus",
     strip: {
@@ -3654,66 +2741,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liblearningmodule",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblearningmodule.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc",
-                "libcutils",
-                "libutils",
-                "libtinyxml2-v34",
-                "libsqlite",
-                "libqti-perfextn-intf",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblightninglaunches",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblightninglaunches.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libmeters-ns",
-                "libsqlite",
-                "liblmutils-ns",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liblistensoundmodel2vendor",
     owner: "oneplus",
     strip: {
@@ -3775,147 +2802,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libllvm-glnext",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libllvm-glnext.so",
-            ],
-            shared_libs: [
-                "libgsl",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libllvm-qcom",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libllvm-qcom.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libllvm-qgl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libllvm-qgl.so",
-            ],
-            shared_libs: [
-                "libgsl",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblmthermallistner",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblmthermallistner.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbinder_ndk",
-                "libutils",
-                "libthermalclient",
-                "android.hardware.thermal-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblmutils-ns",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblmutils-ns.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libnl",
-                "vendor.qti.hardware.servicetracker@1.0",
-                "vendor.qti.hardware.servicetracker@1.1",
-                "libhidlbase",
-                "libsqlite",
-                "libutils",
-                "liblearningmodule",
-                "android.hardware.thermal-V1-ndk",
-                "liblmthermallistner",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libloadalgo_stub",
     owner: "oneplus",
     strip: {
@@ -3929,43 +2815,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcdsprpc",
                 "libvmmem",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmapperutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmapperutils.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libgralloctypes",
-                "libgrallocutils",
-                "libhidlbase",
-                "android.hardware.graphics.common@1.2",
-                "android.hardware.graphics.mapper@4.0",
-                "libbinder_ndk",
-                "libgralloc.qti",
-                "libutilscallstack",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libvndksupport",
                 "libc++",
                 "libc",
                 "libm",
@@ -4072,38 +2921,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmemperfd",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmemperfd.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libqti-perfextn-intf",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
-                "libcrypto",
-                "libz",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmemutils",
     owner: "oneplus",
     strip: {
@@ -4120,62 +2937,6 @@ cc_prebuilt_library_shared {
                 "libvmmem",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmeters-ns",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmeters-ns.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "liblmutils-ns",
-                "libq-perflog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmeters",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmeters.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc",
-                "libcutils",
-                "liblearningmodule",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -4229,7 +2990,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder_ndk",
-                "vendor.qti.hardware.minkipcbinder-V1-ndk",
+                "vendor.qti.hardware.minkipcbinder-V1-ndk_vendor",
                 "libbinder",
                 "libc++",
                 "libc",
@@ -4853,40 +3614,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liboffscreenpoweroptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liboffscreenpoweroptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libolc_vnd_vendor",
     stem: "libolc_vnd",
     owner: "oneplus",
@@ -5090,96 +3817,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libperfconfig",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libperfconfig.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libxml2",
-                "libqti-util",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libperfdb",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libperfdb.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libsqlite",
-                "libc",
-                "libq-perflog",
-                "libqti-perfd",
-                "libxml2",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libperfioctl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libperfioctl.so",
-            ],
-            shared_libs: [
-                "libdrm",
-                "libutils",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libperipheral_client",
     owner: "oneplus",
     strip: {
@@ -5196,239 +3833,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder",
                 "libmdmdetect",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libpowercore",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpowercore.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "vendor.display.config@1.0",
-                "libhidlbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprefapps",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprefapps.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libsqlite",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprekill",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprekill.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libmeters-ns",
-                "libsqlite",
-                "libmemperfd",
-                "libq-perflog",
-                "libhidlbase",
-                "libutils",
-                "liblmutils-ns",
-                "vendor.qti.hardware.servicetracker@1.0",
-                "vendor.qti.hardware.servicetracker@1.1",
-                "libprotobuf-cpp-full-21.12-vendorcompat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprocomp",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprocomp.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libq-perflog",
-                "liblearningmodule",
-                "libmeters-ns",
-                "libsqlite",
-                "liblmutils-ns",
-                "libmemperfd",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libpsmoptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpsmoptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libsqlite",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libq-perflog",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libq-perflog.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqapesdk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqapesdk.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libsqlite",
-                "vendor.display.config@1.0",
-                "libhidlbase",
-                "libutils",
-                "libthermalclient",
-                "android.hardware.thermal-V1-ndk",
-                "liblmthermallistner",
-                "libperfconfig",
-                "libqti-perfd",
-                "libqti-qesdk-secure",
-                "libmeters-ns",
-                "liblmutils-ns",
-                "libdisplayconfig.qti",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V12-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -5460,288 +3864,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "vendor.qti.hardware.qasr-V2-ndk",
                 "libar-pal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_base",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_base.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_basecodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_basecodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqc2audio_base",
-                "libqc2audio_utils",
-                "libqc2audio_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_core",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_core.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqc2audio_base",
-                "libqc2audio_hooks",
-                "libqc2audio_utils",
-                "libqc2audio_platform",
-                "libqc2audio_basecodec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_hooks",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_hooks.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqc2audio_base",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_hwaudiocodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_hwaudiocodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libqc2audio_base",
-                "libqc2audio_platform",
-                "libqc2audio_utils",
-                "libqc2audio_basecodec",
-                "libcodec2_vndk",
-                "libstagefright_foundation",
-                "libpalclient",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_platform",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_platform.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqc2audio_base",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_swaudiocodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_swaudiocodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libqc2audio_base",
-                "libqc2audio_platform",
-                "libqc2audio_utils",
-                "libqc2audio_basecodec",
-                "libcodec2_vndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2audio_utils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2audio_utils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqc2audio_base",
-                "libqc2audio_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqc2vppfilter",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqc2vppfilter.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_basecodec",
-                "libqcodec2_utils",
-                "vendor.qti.hardware.vpp-V1-ndk",
-                "libbinder_ndk",
-                "vendor.qti.hardware.qconfig-V1-ndk",
-                "qti.video.utils.videobufferlayout",
-                "libjsoncpp",
                 "libc++",
                 "libc",
                 "libm",
@@ -5868,437 +3990,6 @@ cc_prebuilt_library_shared {
                 "libqmi_client_qmux",
                 "libqmi_legacy",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_base",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_base.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_basecodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_basecodec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_platform",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_core",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_core.so",
-            ],
-            shared_libs: [
-                "libjsoncpp",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_hooks",
-                "libqcodec2_utils",
-                "libqcodec2_platform",
-                "libqcodec2_basecodec",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_cvpfilter",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_cvpfilter.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libeva",
-                "libcv_common",
-                "libqcodec2_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_filterbase",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_filterbase.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_hooks",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_hooks.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_imgtxrfilter",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_imgtxrfilter.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libqcodec2_platform",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_mockfilter",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_mockfilter.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libqcodec2_platform",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_platform",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_platform.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libjsoncpp",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_streaminteg_filter",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_streaminteg_filter.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_utils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_utils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_platform",
-                "libhidlbase",
-                "libgralloctypes",
-                "libgralloc.qti",
-                "libvndksupport",
-                "libmapperutils",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@4.0",
-                "libnativewindow",
-                "libvideotxr",
-                "qti.video.utils.videobufferlayout",
-                "mapper.qti",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2_v4l2codec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2_v4l2codec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libqcodec2_base",
-                "libqcodec2_platform",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libcodec2_vndk",
-                "libvmmem",
-                "qti.video.utils.videobufferlayout",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqconfigclient",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqconfigclient.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "vendor.qti.hardware.qconfig-V1-ndk",
-                "libjsoncpp",
-                "libbase",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -7007,405 +4698,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqspm-mem-utils-vendor",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqspm-mem-utils-vendor.so",
-            ],
-            shared_libs: [
-                "vendor.qti.qspmhal-V1-ndk",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-appclassifier",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-appclassifier.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libcutils",
-                "libperfdb",
-                "libsqlite",
-                "libq-perflog",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-jankrescue",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-jankrescue.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libperfconfig",
-                "libqti-perfd",
-                "libqti-scenariod",
-                "libqti-s3tf",
-                "libqti-util",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-lllite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-lllite.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libcutils",
-                "libperfdb",
-                "libsqlite",
-                "libq-perflog",
-                "libqti-util",
-                "libperfconfig",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-perfd-client",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-perfd-client.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-perfd",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-perfd.so",
-            ],
-            shared_libs: [
-                "vendor.qti.memory.pasrmanager-V1-ndk",
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libxml2",
-                "libqti-util",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libbase",
-                "libthermalclient",
-                "libperfconfig",
-                "libdisplayconfig.qti",
-                "libperfioctl",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V12-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-perfextn-intf",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-perfextn-intf.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libqti-util",
-                "libperfconfig",
-                "libxml2",
-                "libqti-perfd",
-                "libqti-scenariod",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-qesdk-secure",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-qesdk-secure.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-s3tf",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-s3tf.so",
-            ],
-            shared_libs: [
-                "libqti-scenariod",
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libqti-perfd",
-                "libbinder_ndk",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libperfconfig",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-scenariod",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-scenariod.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libq-perflog",
-                "libutils",
-                "libxml2",
-                "libqti-util",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libbase",
-                "libperfconfig",
-                "libperfioctl",
-                "libbinder_ndk",
-                "libqti-perfd",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-sslite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-sslite.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libperfconfig",
-                "libqti-perfd",
-                "libqti-scenariod",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-util",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-util.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "libxml2",
-                "liblog",
-                "libq-perflog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti-utils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqti-utils.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqtigefar",
     owner: "oneplus",
     strip: {
@@ -8014,62 +5306,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsilkyscrolls",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsilkyscrolls.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "liblearningmodule",
-                "libsqlite",
-                "libmeters-ns",
-                "liblmutils-ns",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libskewknob",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libskewknob.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc",
-                "libcutils",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsmemlog",
     owner: "oneplus",
     strip: {
@@ -8324,6 +5560,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsnsapi-full",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsnsapi-full.so",
+            ],
+            shared_libs: [
+                "libprotobuf-cpp-full-21.12-vendorcompat",
+                "libcutils",
+                "libutils",
+                "libqmi_common_so",
+                "libqmi_cci",
+                "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsnsapi",
     owner: "oneplus",
     strip: {
@@ -8553,7 +5819,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstandbyfeature",
+    name: "libsubsystem_control",
     owner: "oneplus",
     strip: {
         none: true,
@@ -8561,43 +5827,15 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libstandbyfeature.so",
+                "proprietary/vendor/lib64/libsubsystem_control.so",
             ],
             shared_libs: [
                 "libcutils",
-                "libutils",
                 "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libstreamparser",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libstreamparser.so",
-            ],
-            shared_libs: [
-                "libvideoutils",
-                "liblog",
-                "libcutils",
-                "qti.video.utils.videobufferlayout",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libmdmdetect",
+                "libperipheral_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -8871,94 +6109,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvideooptfeature",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvideooptfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder",
-                "libtinyxml2-v34",
-                "libpowercore",
-                "libdisplayconfig.qti",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvideotxr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvideotxr.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libnativewindow",
-                "libhidlbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvideoutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvideoutils.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvmfilexfer",
     owner: "oneplus",
     strip: {
@@ -8973,6 +6123,32 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libqrtr",
                 "libmemutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvmmem",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvmmem.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbase",
                 "libc++",
                 "libc",
                 "libm",
@@ -10521,31 +7697,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.alarm-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.alarm-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.bluetooth_sar-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -10647,59 +7798,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.hexlp-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -10726,7 +7824,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.minkipcbinder-V1-ndk",
+    name: "vendor.qti.hardware.minkipcbinder-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.minkipcbinder-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -10739,56 +7838,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.perf2-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.power.powermodule-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -10815,31 +7864,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qconfig-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.qconfig-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -10904,7 +7928,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp-V1-ndk",
+    name: "vendor.qti.hardware.vpp-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.vpp-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -11063,32 +8088,6 @@ cc_prebuilt_library_shared {
                 "libwfdsessionmodule",
                 "liblog",
                 "libwfdcommonutils_proprietary",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.memory.pasrmanager-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -11390,114 +8389,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.qspmhal-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal-impl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.qspmhal-impl.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "vendor.qti.qspmhal-V1-ndk",
-                "libqspm-mem-utils-vendor",
-                "liblog",
-                "libcutils",
-                "libbinder",
-                "libbase",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.snapdragonServices-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.snapdragonServices-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.snapdragonServices.qape-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.snapdragonServices.qape-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
 prebuilt_rfsa {
     name: "vendor_lib_rfsa_adsp_chre_qsh_shim_so",
     filename: "chre_qsh_shim.so",
@@ -11571,176 +8462,6 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdiag_system",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiag_system.so",
-            ],
-            shared_libs: [
-                "vendor.qti.diaghal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libc",
-                "libcutils",
-                "libbinder_ndk",
-                "vendor.qti.diaghal-V1-ndk",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiagatbparser_system",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiagatbparser_system.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmmosal",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libmmosal.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmmparser_lite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libmmparser_lite.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libmmosal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmmrtpdecoder",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libmmrtpdecoder.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libmmosal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmmrtpencoder",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libmmrtpencoder.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libostatslog",
     owner: "oneplus",
     strip: {
@@ -11756,998 +8477,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libstatssocket",
                 "libstatspull",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcc",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libqcc.so",
-            ],
-            shared_libs: [
-                "libcurl",
-                "libssl",
-                "libcrypto",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libfmq",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.qccvndhal@1.0",
-                "vendor.qti.hardware.qccsyshal@1.2",
-                "android.hardware.common-V2-ndk",
-                "vendor.qti.qccvndhal_aidl-V1-ndk",
-                "vendor.qti.qccsyshal_aidl-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcc_file_agent_sys",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libqcc_file_agent_sys.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqccfileservice",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libqccfileservice.so",
-            ],
-            shared_libs: [
-                "libcurl",
-                "libssl",
-                "libcrypto",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libfmq",
-                "libhidlbase",
-                "libbinder_ndk",
-                "vendor.qti.hardware.qccvndhal@1.0",
-                "vendor.qti.hardware.qccsyshal@1.2",
-                "android.hardware.common-V2-ndk",
-                "vendor.qti.qccvndhal_aidl-V1-ndk",
-                "vendor.qti.qccsyshal_aidl-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdavenhancements",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdavenhancements.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libbinder",
-                "libutils",
-                "libgui",
-                "libui",
-                "libstagefright_foundation",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdclient",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdclient.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libgui",
-                "libmmosal",
-                "libinput",
-                "libwfdsinksm",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libwfdmminterface",
-                "libnativewindow",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdcommonutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdcommonutils.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libnl",
-                "libwfdmminterface",
-                "libwfdconfigutils",
-                "libui",
-                "libgui",
-                "libwfddisplayconfig",
-                "libion",
-                "libprocessgroup",
-                "libdng_sdk",
-                "libjpeg",
-                "libpiex",
-                "libpng",
-                "libheif",
-                "libnativewindow",
-                "libEGL",
-                "libGLESv2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdconfigutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdconfigutils.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libnl",
-                "libwfdmminterface",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfddisplayconfig",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfddisplayconfig.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "vendor.display.config@2.0",
-                "libdisplayconfig.system.qti",
-                "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdmminterface",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdmminterface.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdmmsink",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdmmsink.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libmedia",
-                "libaudioclient",
-                "libgui",
-                "libbinder",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libui",
-                "libmmparser_lite",
-                "libmmrtpdecoder",
-                "libcutils",
-                "libwfddisplayconfig",
-                "libhwui",
-                "libwfdmminterface",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libandroid",
-                "libmediandk",
-                "libaaudio",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdmmsrc_system",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdmmsrc_system.so",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libgui",
-                "libui",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libinput",
-                "libwfdmminterface",
-                "libwfddisplayconfig",
-                "libmedia_helper",
-                "libaudioclient",
-                "libwfdavenhancements",
-                "libhidlbase",
-                "libgralloctypes",
-                "android.hardware.graphics.mapper@4.0",
-                "libvndksupport",
-                "android.hardware.graphics.allocator@4.0",
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdnative",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdnative.so",
-            ],
-            shared_libs: [
-                "libinput_shim",
-                "libandroid_runtime",
-                "libui",
-                "libinput",
-                "libbinder",
-                "libgui",
-                "libnativehelper",
-                "libutils",
-                "liblog",
-                "libwfdclient",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.base@1.0",
-                "android.hidl.token@1.0-utils",
-                "android.hardware.graphics.common@1.0",
-                "android.hardware.graphics.bufferqueue@1.0",
-                "android.hardware.graphics.bufferqueue@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdrtsp",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdrtsp.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "libutils",
-                "libmmosal",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdservice",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libgui",
-                "libwfdsinksm",
-                "libmmosal",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libinput",
-                "libwfdmminterface",
-                "libmedia_helper",
-                "libaudioclient",
-                "libaudiofoundation",
-                "audioclient-types-aidl-cpp",
-                "android.media.audio.common.types-V4-cpp",
-                "libwfdmmsrc_system",
-                "libwfdavenhancements",
-                "libhidlbase",
-                "vendor.qti.hardware.wifidisplaysession@1.0",
-                "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfdsinksm",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfdsinksm.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "libutils",
-                "libwfdrtsp",
-                "libwfduibcinterface",
-                "libwfdmmsink",
-                "libmmosal",
-                "libmedia",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libwfdmminterface",
-                "libmmrtpencoder",
-                "libmmrtpdecoder",
-                "libhidlbase",
-                "libnativewindow",
-                "libmediandk",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfduibcinterface",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfduibcinterface.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libwfduibcsrcinterface",
-                "libwfduibcsinkinterface",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfduibcsink",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfduibcsink.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libwfdconfigutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfduibcsinkinterface",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfduibcsinkinterface.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libwfduibcsink",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfduibcsrc",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfduibcsrc.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "libwfdcommonutils",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libwfdconfigutils",
-                "libwfddisplayconfig",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwfduibcsrcinterface",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libwfduibcsrcinterface.so",
-            ],
-            shared_libs: [
-                "libmmosal",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libwfduibcsrc",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccsyshal@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccsyshal@1.1",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.qccsyshal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccsyshal@1.2",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.qccsyshal@1.0",
-                "vendor.qti.hardware.qccsyshal@1.1",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccvndhal@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.wifidisplaysession@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qccsyshal_aidl-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "android.hardware.common.fmq-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qccsyshal_aidl-halimpl",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libfmq",
-                "libqcc_file_agent_sys",
-                "libcutils",
-                "liblog",
-                "libz",
-                "libbase",
-                "libbinder",
-                "libbinder_ndk",
-                "vendor.qti.qccsyshal_aidl-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qccvndhal_aidl-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "android.hardware.common.fmq-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -13498,38 +9227,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/odm/lib64/libc2filterplugin.so",
             ],
-            shared_libs: [
-                "libEGL",
-                "libGLESv1_CM",
-                "libGLESv2",
-                "libGLESv3",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libcutils",
-                "libprocessgroup",
-                "libsfplugin_ccodec_utils",
-                "libsync",
-                "libui",
-                "libutils",
-                "libstagefright_foundation",
-                "libbinder",
-                "libhidlbase",
-                "liblog",
-                "android.frameworks.stats-V1-ndk",
-                "libbinder_ndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqconfigclient",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     device_specific: true,
 }
@@ -13854,31 +9555,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/odm/lib64/libqcodec2_dolbydecoderfilter.so",
             ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libqcodec2_platform",
-                "qti.video.utils.videobufferlayout",
-                "libdolbydecoderprocessor",
-                "libstagefright_foundation",
-                "libnativewindow",
-                "android.frameworks.stats-V1-ndk",
-                "libhidlbase",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     device_specific: true,
 }
@@ -13894,29 +9574,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/odm/lib64/libqcodec2_dolbyencoderfilter.so",
             ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqcodec2_base",
-                "libqcodec2_utils",
-                "libqcodec2_basecodec",
-                "libqcodec2_filterbase",
-                "libqcodec2_platform",
-                "qti.video.utils.videobufferlayout",
-                "libnativewindow",
-                "libEGL",
-                "libGLESv3",
-                "libdolbyencoderprocessor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     device_specific: true,
 }
@@ -14131,37 +9792,6 @@ android_app_import {
     product_specific: true,
 }
 
-android_app_import {
-    name: "QCC",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/QCC/QCC.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "WfdService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "WfdCommon",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system/framework/WfdCommon.jar",
-    ],
-}
-
 dex_import {
     name: "com.android.hotwordenrollment.common.util",
     owner: "oneplus",
@@ -14235,24 +9865,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "c2_manifest_vendor.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/c2_manifest_vendor.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "c2_manifest_vendor_audio.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "manifest_btaudiocoreservices_qti.xml",
     owner: "oneplus",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_btaudiocoreservices_qti.xml",
@@ -14289,27 +9901,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "snapdragon_services.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/snapdragon_services.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "vendor.qti.diag.hal.service.xml",
     owner: "oneplus",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.alarm.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.alarm.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -14346,33 +9940,6 @@ prebuilt_etc_xml {
     name: "vendor.qti.hardware.minkipcbinder-service.xml",
     owner: "oneplus",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.minkipcbinder-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.perf2.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.power.powermodule.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.qconfig-service.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -14430,24 +9997,6 @@ prebuilt_etc_xml {
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.qspmhal-service.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.qccsyshal_aidl-service.xml",
-    owner: "oneplus",
-    src: "proprietary/system_ext/etc/vintf/manifest/vendor.qti.qccsyshal_aidl-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    system_ext_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -14554,38 +10103,6 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "cnss-daemon",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/cnss-daemon",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libnl",
-                "libcld80211",
-                "libperipheral_client",
-                "libmdmdetect",
                 "libc++",
                 "libc",
                 "libm",
@@ -14914,74 +10431,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "qconfigservice",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/qconfigservice",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "vendor.qti.hardware.qconfig-V1-ndk",
-                "libjsoncpp",
-                "libbase",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.hardware.alarm-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.alarm-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libbinder",
-                "libhardware",
-                "libhidlbase",
-                "libbinder_ndk",
-                "libavservices_minijail",
-                "vendor.qti.hardware.alarm-impl",
-                "vendor.qti.hardware.alarm-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.capabilityconfigstore-service",
     owner: "oneplus",
     target: {
@@ -15081,48 +10530,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.perf2-hal-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.perf2-hal-service",
-            ],
-            shared_libs: [
-                "vendor.qti.snapdragonServices-V1-ndk",
-                "vendor.qti.snapdragonServices.qape-V1-ndk",
-                "liblog",
-                "libq-perflog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libbinder_ndk",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libqti-scenariod",
-                "libperfconfig",
-                "libqti-perfd",
-                "libqti-util",
-                "libavservices_minijail",
-                "libqti-perfd-client",
-                "android.hardware.thermal-V1-ndk",
-                "libqti-s3tf",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.qseecom@1.0-service",
     owner: "oneplus",
     target: {
@@ -15189,87 +10596,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.media.c2@1.0-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
-            ],
-            shared_libs: [
-                "server_configurable_flags",
-                "libaconfig_storage_read_api_cc",
-                "libbase",
-                "libcodec2",
-                "libcodec2_hal_common",
-                "libcodec2_aidl",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "android.hardware.media.c2-V1-ndk",
-                "libavservices_minijail",
-                "libbinder",
-                "libbinder_ndk",
-                "libhwbinder",
-                "libvndksupport",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.media.c2audio@1.0-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
-            ],
-            shared_libs: [
-                "server_configurable_flags",
-                "libaconfig_storage_read_api_cc",
-                "libbase",
-                "libcodec2",
-                "libcodec2_hal_common",
-                "libcodec2_vndk",
-                "android.hardware.media.c2-V1-ndk",
-                "libbinder_ndk",
-                "libcodec2_aidl",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libavservices_minijail",
-                "libbinder",
-                "libvndksupport",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.memory.pasrmanager-service",
     owner: "oneplus",
     target: {
@@ -15305,38 +10631,6 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
-    name: "init.kernel.init_boot-memory",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.init_boot-memory.sh",
-    filename: "init.kernel.init_boot-memory.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.kernel.post_boot.sh",
-    filename: "init.kernel.post_boot.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qcom.class_core",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qcom.class_core.sh",
-    filename: "init.qcom.class_core.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qcom.post_boot",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qcom.post_boot.sh",
-    filename: "init.qcom.post_boot.sh",
-    soc_specific: true,
-}
-
-sh_binary {
     name: "init.qcom.sensors",
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qcom.sensors.sh",
@@ -15345,34 +10639,10 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qti.kernel",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qti.kernel.sh",
-    filename: "init.qti.kernel.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.media",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qti.media.sh",
-    filename: "init.qti.media.sh",
-    soc_specific: true,
-}
-
-sh_binary {
     name: "init.qti.qcv",
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qti.qcv.sh",
     filename: "init.qti.qcv.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.write",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qti.write.sh",
-    filename: "init.qti.write.sh",
     soc_specific: true,
 }
 
@@ -15511,71 +10781,6 @@ cc_prebuilt_binary {
                 "libqmi_csi",
                 "libmdmdetect",
                 "libperipheral_client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "power_off_alarm",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/power_off_alarm",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "poweropt-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/poweropt-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware_legacy",
-                "libhardware",
-                "libhwbinder",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libpowercore",
-                "libtinyxml2-v34",
-                "vendor.qti.hardware.perf2-V1-ndk",
-                "libbinder_ndk",
-                "vendor.qti.hardware.power.powermodule-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -15765,33 +10970,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "qlm-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/qlm-service",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libxml2",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "qmipriod",
     owner: "oneplus",
     target: {
@@ -15916,35 +11094,6 @@ cc_prebuilt_binary {
                 "libsnsapi",
                 "libhardware_legacy",
                 "libbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "qsap_qapeservice",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/qsap_qapeservice",
-            ],
-            shared_libs: [
-                "liblog",
-                "libqesdk2_0",
-                "libjsoncpp",
-                "libqti-perfd-client",
-                "libavservices_minijail",
                 "libc++",
                 "libc",
                 "libm",
@@ -16094,36 +11243,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "snapdragon_services",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/snapdragon_services",
-            ],
-            shared_libs: [
-                "liblog",
-                "libbinder_ndk",
-                "vendor.qti.snapdragonServices-V1-ndk",
-                "libbase",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "sscrpcd",
     owner: "oneplus",
     target: {
@@ -16211,11 +11330,87 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "system_dlkm_modprobe",
+cc_prebuilt_binary {
+    name: "ssr_diag",
     owner: "oneplus",
-    src: "proprietary/vendor/bin/system_dlkm_modprobe.sh",
-    filename: "system_dlkm_modprobe.sh",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssr_diag",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ssr_setup",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssr_setup",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libmdmdetect",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "subsystem_ramdump",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/subsystem_ramdump",
+            ],
+            shared_libs: [
+                "libmdmdetect",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
@@ -16305,21 +11500,19 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.qspmhal-service",
+    name: "ubwcconvert",
     owner: "oneplus",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/vendor.qti.qspmhal-service",
+                "proprietary/vendor/bin/ubwcconvert",
             ],
             shared_libs: [
-                "vendor.qti.qspmhal-V1-ndk",
-                "vendor.qti.qspmhal-impl",
+                "libEGL",
+                "libnativewindow",
+                "libGLESv3",
+                "libui",
                 "liblog",
-                "libutils",
-                "libavservices_minijail",
-                "libbase",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -16335,14 +11528,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "vendor_modprobe",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/vendor_modprobe.sh",
-    filename: "vendor_modprobe.sh",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "vppservice",
     owner: "oneplus",
@@ -16354,7 +11539,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "liblog",
                 "libutils",
-                "vendor.qti.hardware.vpp-V1-ndk",
+                "vendor.qti.hardware.vpp-V1-ndk_vendor",
                 "libcutils",
                 "libvpplibrary",
                 "libqdMetaData",
@@ -16502,73 +11687,6 @@ cc_prebuilt_binary {
                 "android.hardware.health-V1-ndk",
                 "vendor.oplus.hardware.displaypanelfeature@1.0",
                 "vendor.oplus.hardware.displaypanelfeature-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "qccsyshal_aidl-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/qccsyshal_aidl-service",
-            ],
-            shared_libs: [
-                "libutils",
-                "libfmq",
-                "libbinder",
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libbinder_ndk",
-                "vendor.qti.qccsyshal_aidl-V1-ndk",
-                "vendor.qti.qccsyshal_aidl-halimpl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "wfdservice64",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/wfdservice64",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libwfdservice",
-                "libmmosal",
-                "libwfdcommonutils",
-                "libwfdconfigutils",
-                "libhidlbase",
-                "libavservices_minijail",
                 "libc++",
                 "libc",
                 "libm",
@@ -16831,34 +11949,6 @@ cc_prebuilt_binary {
     device_specific: true,
 }
 
-install_symlink {
-    name: "system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/WfdService/lib/arm64/libwfdnative.so",
-    symlink_target: "/system_ext/lib64/libwfdnative.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libEGL_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libEGL_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libGLESv2_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libGLESv2_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libq3dtools_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libq3dtools_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
-}
-
 cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.dpm.api@1.0_vendor",
     stem: "com.qualcomm.qti.dpm.api@1.0",
@@ -16921,46 +12011,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.gnss-aidl-impl-qti",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V4-ndk",
-                "android.hardware.health-V1-ndk",
-                "android.hardware.health@1.0",
-                "android.hardware.health@2.0",
-                "android.hardware.health@2.1",
-                "libhidlbase",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libloc_core",
-                "libgps.utils",
-                "liblocation_api",
-                "libqti_vndfwk_detect_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
 }
@@ -17055,7 +12105,7 @@ cc_prebuilt_library_shared {
                 "libnetutils",
                 "libz",
                 "libbinder_ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17191,12 +12241,12 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libqmiservices",
                 "libqmi_encdec",
-                "vendor.qti.ims.uceaidlservice-V1-ndk",
-                "vendor.qti.ims.imscmaidlservice-V1-ndk",
-                "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
-                "vendor.qti.ims.rcssipaidlservice-V1-ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.uceaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.imscmaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17265,9 +12315,9 @@ cc_prebuilt_library_shared {
                 "libidl",
                 "libqti_vndfwk_detect_vendor",
                 "libandroid_net",
-                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
-                "vendor.qti.ims.configaidlservice-V1-ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17488,7 +12538,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder_ndk",
                 "libandroid_runtime_lazy",
-                "vendor.qti.data.factoryservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17721,7 +12771,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libbase",
                 "libbinder_ndk",
-                "vendor.qti.hardware.cacertaidlservice-V1-ndk",
+                "vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17818,17 +12868,17 @@ cc_prebuilt_library_shared {
                 "libandroid_net",
                 "android.hardware.wifi.supplicant-V3-ndk",
                 "android.hardware.wifi.hostapd-V2-ndk",
-                "vendor.qti.data.factoryservice-V1-ndk",
-                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.mwqemaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libwpa_client",
                 "libc++",
                 "libc",
@@ -17861,7 +12911,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libdiag",
                 "liblog",
-                "vendor.qti.data.factoryservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
                 "libandroid_net",
                 "libc++",
                 "libc",
@@ -18386,7 +13436,7 @@ cc_prebuilt_library_shared {
                 "libqmi_cci",
                 "libcacertclient",
                 "libbinder_ndk",
-                "vendor.qti.hardware.cacertaidlservice-V1-ndk",
+                "vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -19919,9 +14969,9 @@ cc_prebuilt_library_shared {
                 "libqcrilNrLogger",
                 "libutils",
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.connectionfactory-V1-ndk",
-                "vendor.qti.hardware.data.ka-V1-ndk",
-                "vendor.qti.hardware.data.dataactivity-V1-ndk",
+                "vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor",
+                "vendor.qti.hardware.data.ka-V1-ndk_vendor",
+                "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -19977,9 +15027,9 @@ cc_prebuilt_library_shared {
                 "qcrilNrQmiModule",
                 "libqmi_cci",
                 "libqmiservices",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libbinder_ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
                 "libutils",
                 "libc++",
                 "libc",
@@ -20482,9 +15532,9 @@ cc_prebuilt_library_shared {
                 "libcneoplookup",
                 "libandroid_net",
                 "libutils",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -20522,9 +15572,9 @@ cc_prebuilt_library_shared {
                 "libxml2",
                 "libandroid_net",
                 "libqti_vndfwk_detect_vendor",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "libcrypto",
                 "libbinder_ndk",
@@ -21479,7 +16529,7 @@ cc_prebuilt_library_shared {
                 "libqmi_cci",
                 "libqmi_client_helper",
                 "libqmiservices",
-                "com.qualcomm.qti.dpm.api@1.0",
+                "com.qualcomm.qti.dpm.api@1.0_vendor",
                 "vendor.qti.hardware.dpmaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
@@ -21550,7 +16600,7 @@ cc_prebuilt_library_shared {
                 "libhardware_legacy",
                 "libbinder_ndk",
                 "vendor.qti.hardware.dpmaidlservice-V1-ndk_vendor",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21625,7 +16675,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factoryservice-V1-ndk",
+    name: "vendor.qti.data.factoryservice-V1-ndk_vendor",
+    stem: "vendor.qti.data.factoryservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21637,14 +16688,14 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.mwqemaidlservice-V1-ndk",
+                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21658,7 +16709,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.mwqemaidlservice-V1-ndk",
+    name: "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.data.mwqemaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21750,7 +16802,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.cacertaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.cacertaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21775,7 +16828,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21787,7 +16841,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21801,7 +16855,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21826,7 +16881,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21838,7 +16894,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21877,7 +16933,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connectionfactory-V1-ndk",
+    name: "vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.connectionfactory-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21889,8 +16946,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.dataactivity-V1-ndk",
-                "vendor.qti.hardware.data.ka-V1-ndk",
+                "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
+                "vendor.qti.hardware.data.ka-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21904,7 +16961,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dataactivity-V1-ndk",
+    name: "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.dataactivity-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21929,7 +16987,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21954,7 +17013,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22007,7 +17067,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.ka-V1-ndk",
+    name: "vendor.qti.hardware.data.ka-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.ka-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22032,7 +17093,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22057,7 +17119,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22108,7 +17171,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.embmsslaidl-V2-ndk",
+    name: "vendor.qti.hardware.embmsslaidl-V2-ndk_vendor",
+    stem: "vendor.qti.hardware.embmsslaidl-V2-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22133,7 +17197,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+    name: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22484,7 +17549,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
+    name: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22509,7 +17575,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.configaidlservice-V1-ndk",
+    name: "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.configaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22534,7 +17601,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.connectionaidlservice-V1-ndk",
+    name: "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.connectionaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22559,7 +17627,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factoryaidlservice-V1-ndk",
+    name: "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.factoryaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22571,11 +17640,11 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
-                "vendor.qti.ims.rcssipaidlservice-V1-ndk",
-                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
-                "vendor.qti.ims.configaidlservice-V1-ndk",
+                "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -22589,7 +17658,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.imscmaidlservice-V1-ndk",
+    name: "vendor.qti.ims.imscmaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.imscmaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22614,7 +17684,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcssipaidlservice-V1-ndk",
+    name: "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.rcssipaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22639,7 +17710,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
+    name: "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22664,7 +17736,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.uceaidlservice-V1-ndk",
+    name: "vendor.qti.ims.uceaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.uceaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22689,7 +17762,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latencyaidlservice-V1-ndk",
+    name: "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.latencyaidlservice-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -22736,562 +17810,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvideocodec",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvideocodec.so",
-            ],
-            shared_libs: [
-                "lib-imsvtutils",
-                "lib-imsvtextutils",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libdiag_system",
-                "libgui",
-                "libandroid",
-                "libnativewindow",
-                "libmediandk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvt",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libmediandk",
-                "libnativewindow",
-                "libion",
-                "libdmabufheap",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhidlbase",
-                "vendor.qti.imsrtpservice@3.0",
-                "vendor.qti.imsrtpservice@3.1",
-                "libbinder",
-                "libbinder_ndk",
-                "vendor.qti.ImsRtpService-V2-ndk",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtextutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtutils",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmctmgr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmfdmgr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmframework",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmtcm",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimsmedia_jni",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ImsRtpService-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ImsRtpService-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmservice@1.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V2-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V3-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V3-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.0",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.1",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.imsrtpservice@3.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -23936,9 +18454,6 @@ android_app_import {
     name: "CneApp",
     owner: "oneplus",
     apk: "proprietary/vendor/app/CneApp/CneApp.apk",
-    required: [
-        "CneApp.libvndfwk_detect_jni.qti_vendor_symlink",
-    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -23958,47 +18473,15 @@ android_app_import {
 }
 
 android_app_import {
-    name: "uimremoteclient",
+    name: "ConsumerIRApp",
     owner: "oneplus",
-    apk: "proprietary/product/app/uimremoteclient/uimremoteclient.apk",
-    certificate: "platform",
+    apk: "proprietary/product/app/ConsumerIRApp/ConsumerIRApp.apk",
+    preprocessed: true,
+    presigned: true,
     dex_preopt: {
         enabled: false,
     },
     product_specific: true,
-}
-
-android_app_import {
-    name: "uimremoteserver",
-    owner: "oneplus",
-    apk: "proprietary/product/app/uimremoteserver/uimremoteserver.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "ImsDataChannelService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/ImsDataChannelService/ImsDataChannelService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "QtiTelephonyService",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
 }
 
 android_app_import {
@@ -24012,253 +18495,10 @@ android_app_import {
     system_ext_specific: true,
 }
 
-android_app_import {
-    name: "dpmserviceapp",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "ims",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "qcrilmsgtunnel",
-    owner: "oneplus",
-    apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "uimremoteclientlibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimremoteclientlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimremoteserverlibrary",
-    owner: "oneplus",
-    jars: [
-        "proprietary/product/framework/uimremoteserverlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "com.qti.dpmframework",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/com.qti.dpmframework.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "dpmapi",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/dpmapi.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "qcrilhook",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/qcrilhook.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connection-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connectionaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V3-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V3-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factoryaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssipaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.2-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuceaidlservice-V1-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.imsdatachannel",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.imsdatachannel.jar",
-    ],
-    system_ext_specific: true,
-}
-
 prebuilt_etc_xml {
     name: "ImsRtpService-aidl.xml",
     owner: "oneplus",
     src: "proprietary/vendor/etc/vintf/manifest/ImsRtpService-aidl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.gnss-aidl-service-qti.xml",
-    owner: "oneplus",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -24563,9 +18803,9 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libbinder_ndk",
                 "libandroid_net",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.factoryservice-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -24626,7 +18866,7 @@ cc_prebuilt_binary {
                 "liblog",
                 "libutils",
                 "libhidlbase",
-                "vendor.qti.hardware.embmsslaidl-V2-ndk",
+                "vendor.qti.hardware.embmsslaidl-V2-ndk_vendor",
                 "libbinder_ndk",
                 "libbinder",
                 "libqmiservices",
@@ -24701,42 +18941,6 @@ cc_prebuilt_binary {
                 "libutils",
                 "libjsoncpp",
                 "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.gnss-aidl-service-qti",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.gnss-aidl-service-qti",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libgps.utils",
-                "liblocation_api",
-                "libbinder_ndk",
-                "libqti_vndfwk_detect_vendor",
-                "libhidlbase",
-                "android.hardware.gnss-V4-ndk",
-                "android.hardware.gnss-aidl-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -24908,7 +19112,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "lib-imscommon",
                 "libbinder_ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -24921,14 +19125,6 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qcrild",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.qcrild.sh",
-    filename: "init.qcrild.sh",
     soc_specific: true,
 }
 
@@ -25514,72 +19710,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "dpmd",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/dpmd",
-            ],
-            shared_libs: [
-                "libdpmframework",
-                "libdiag_system",
-                "libhardware_legacy",
-                "libhidlbase",
-                "libcutils",
-                "libutils",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "tcmd",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/tcmd",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libbinder_ndk",
-                "libcutils",
-                "libutils",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "liblog",
-                "vendor.qti.hardware.dpmservice@1.0",
-                "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-                "libavservices_minijail",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "commcenterd",
     owner: "oneplus",
     target: {
@@ -25808,20 +19938,6 @@ sh_binary {
     src: "proprietary/odm/bin/init.subsys.sh",
     filename: "init.subsys.sh",
     device_specific: true,
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
 }
 
 install_symlink {
